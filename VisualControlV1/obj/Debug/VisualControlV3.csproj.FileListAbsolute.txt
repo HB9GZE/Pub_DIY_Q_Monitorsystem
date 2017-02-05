@@ -46,3 +46,4 @@ C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\ob
 C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\obj\Debug\VisualControlV3.application
 C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\obj\Debug\VisualControlV3.exe
 C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\obj\Debug\VisualControlV3.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\obj\Debug\VisualControlV3.csprojResolveAssemblyReference.cache
