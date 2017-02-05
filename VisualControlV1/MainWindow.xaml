@@ -8,7 +8,7 @@
         xmlns:wpf="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
 
         mc:Ignorable="d"
-		WindowStartupLocation="CenterScreen" Width="1200" Height="700" Name="myWindow">
+		WindowStartupLocation="CenterScreen" Width="1400" Height="900" Name="myWindow">
 
 
     <Window.Resources>
