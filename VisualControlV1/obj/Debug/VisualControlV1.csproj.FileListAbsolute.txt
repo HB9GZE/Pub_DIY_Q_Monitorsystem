@@ -1,0 +1,361 @@
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\Desktop\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDC MC VisualControl\VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\Desktop\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\WPFToolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\WPFToolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\WPFToolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\WPFToolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\Eto.OxyPlot.Wpf.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\OxyPlot.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\OxyPlot.Extensions.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\OxyPlot.Xps.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\OxyPlot.Xps.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDC VisualControlV1\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\Eto.OxyPlot.Wpf.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Extensions.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\Eto.OxyPlot.Wpf.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Extensions.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Xps.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Xps.xml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\Eto.OxyPlot.Wpf.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Extensions.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Xps.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\OxyPlot.Xps.xml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\Eto.OxyPlot.Wpf.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Extensions.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.dll
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.xml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.pdb
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan Meyre\Source\Repos\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan Meyre\OneDrive\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\Eto.OxyPlot.Wpf.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Extensions.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.Design.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.dll
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\Microsoft.Maps.MapControl.WPF.xml
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\OxyPlot.Xps.xml
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Input.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\System.Windows.Controls.Layout.Toolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\bin\Debug\WPFToolkit.VisualStudio.Design.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.csprojResolveAssemblyReference.cache
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\MainWindow.g.cs
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\App.g.cs
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.cache
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1_MarkupCompile.lref
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\App.baml
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\MainWindow.baml
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.g.resources
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.Properties.Resources.resources
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.csproj.GenerateResource.Cache
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.exe.manifest
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V1\VisualControlV1\obj\Debug\VisualControlV1.application
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\bin\Debug\VisualControlV1.exe.config
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\obj\Debug\VisualControlV1.exe
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\obj\Debug\VisualControlV1.pdb
+C:\Users\Stefan\OneDrive\BLDC\BLDC STM32\BLDCVisualControl_V3\VisualControlV1\bin\Debug\VisualControlV3.exe.config

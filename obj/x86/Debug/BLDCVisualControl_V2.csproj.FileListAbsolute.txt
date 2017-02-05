@@ -1,0 +1,1 @@
+C:\Users\Stefan\OneDrive\BLDC STM32\BLDCVisualControl_V1\bin\Debug\WindowsApplication.exe.config

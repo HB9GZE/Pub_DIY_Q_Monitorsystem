@@ -1,0 +1,210 @@
+﻿<Window x:Class="VisualControlV1.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:local="clr-namespace:VisualControlV1"
+        xmlns:wpf="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+
+        mc:Ignorable="d"
+		WindowStartupLocation="CenterScreen" Width="1200" Height="700" Name="myWindow">
+
+
+    <Window.Resources>
+        <local:MathConverter x:Key="MathConv" />
+    </Window.Resources>
+
+
+    <Grid Name="myGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition Width="120" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Line Grid.Row="1" X2="1" VerticalAlignment="Top" Stroke="Gray" Stretch="Fill" Height="1" />
+
+        <TabControl Grid.Column="0" Margin="10,0,108,1" SelectedIndex="2" SelectionChanged="TabControl_SelectionChanged" Grid.ColumnSpan="3">
+            <TabItem Header="Motorcontroller Settings" Height="22" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="146">
+                <Grid Margin="10,0,-10,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="340*"/>
+                        <ColumnDefinition Width="150*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Slider x:Name="slider3" Value="17" HorizontalAlignment="Left" Margin="64,44,0,0" VerticalAlignment="Top" Height="40" Width="422" Maximum="255" TickFrequency="10" TickPlacement="BottomRight" Background="#FF0E8AF1" ValueChanged="slider3_ValueChanged" BorderBrush="#FFFDFDFD" AutoToolTipPlacement="BottomRight" SmallChange="2" LargeChange="2"/>
+                    <Label x:Name="label33" ContentStringFormat="PWM is:   {0:0}" Content="{Binding ElementName=slider3, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="520,44,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Slider x:Name="slider4" Value="90" HorizontalAlignment="Left" Margin="64,130,0,0" VerticalAlignment="Top" Height="40" Width="422" Maximum="180" TickFrequency="10" TickPlacement="BottomRight" Background="#FF0E8AF1" ValueChanged="slider4_ValueChanged" BorderBrush="#FFFDFDFD" AutoToolTipPlacement="BottomRight"/>
+                    <Label x:Name="label44" ContentStringFormat="Roll is:   {0:0}" Content="{Binding ElementName=slider4, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="520,136,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Slider x:Name="slider5" Value="90" HorizontalAlignment="Left" Margin="64,237,0,0" VerticalAlignment="Top" Height="40" Width="422" Maximum="180" TickFrequency="10" TickPlacement="BottomRight" Background="#FF0E8AF1" ValueChanged="slider5_ValueChanged" BorderBrush="#FFFDFDFD" AutoToolTipPlacement="BottomRight"/>
+                    <Label x:Name="label55" ContentStringFormat="Pitch is:   {0:0}" Content="{Binding ElementName=slider5, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="520,237,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Slider x:Name="slider1" Value="12" HorizontalAlignment="Left" Margin="64,341,0,0" VerticalAlignment="Top" Height="40" Width="422" Maximum="255" TickFrequency="10" TickPlacement="BottomRight" Background="#FF0E8AF1" ValueChanged="slider1_ValueChanged" BorderBrush="#FFFDFDFD" AutoToolTipPlacement="BottomRight"/>
+                    <Label x:Name="label" ContentStringFormat="Yaw is:   {0:0}" Content="{Binding ElementName=slider1, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="520,347,0,0" VerticalAlignment="Top" Width="184"/>
+                    <Slider x:Name="slider2" HorizontalAlignment="Left" Margin="64,422,0,0" VerticalAlignment="Top" Width="243" Background="#FF189B0B" Maximum="255" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="slider2_ValueChanged" Height="34"  Cursor="Arrow" Value="128"/>
+                    <Label x:Name="label2" ContentStringFormat="OC5 offset 0x234 is:   {0:0}" Content="{Binding ElementName=slider2, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="342,422,0,0" VerticalAlignment="Top" Width="184"/>
+
+                    <Label x:Name="label4" ContentStringFormat="Current is [A]:  {0:F1}"  Content="{Binding CurrentCurrent }" HorizontalAlignment="Left" Height="34" Margin="64,544,0,0" VerticalAlignment="Top" Width="160"/>
+                    <Label x:Name="label5" ContentStringFormat="Decharging is [mAh]:  {0}" Content="{Binding DechargeMAH}" HorizontalAlignment="Left" Height="34" Margin="366,544,0,0" VerticalAlignment="Top" Width="160"/>
+
+                    <Image x:Name="image1" Source="Sources/kompass.png" TouchUp="MyTouchDownAndUp" TouchDown="MyTouchDownAndUp" TouchMove="MyTouchMove"
+                           HorizontalAlignment="Center" VerticalAlignment="Bottom"  RenderTransformOrigin=".5,.5" Grid.ColumnSpan="2" Margin="731,0,10,0" >
+                        <Image.RenderTransform>
+                            <RotateTransform Angle="{Binding NewAngle}" />
+                        </Image.RenderTransform>
+                    </Image>
+                    <Button x:Name="buttonStart" Content="Start Motorr" Grid.Column="1" Margin="105,35,107,524" Click="button_Click_Start" BorderBrush="#FF42EC11" Background="#FF42EC11"/>
+                    <Button x:Name="buttonStop" Content="Stop Motor" Grid.Column="1" Margin="105,117,107,438" Click="button_Click_Stop" BorderBrush="#FFEC1157" Background="#FFEC1157"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Graphs">
+                <Grid Name="myGrid2">
+                    <oxy:PlotView x:Name="Plot1" Title="{Binding Title}" Margin="33,36,496,346">
+                        <oxy:PlotView.Axes>
+                            <oxy:LinearAxis Position="Bottom" Minimum="1" Maximum="20" />
+                            <oxy:LinearAxis Position="Left" Minimum="0" Maximum="6" />
+                        </oxy:PlotView.Axes>
+                        <oxy:PlotView.Series>
+                            <oxy:LineSeries ItemsSource="{Binding Points}"/>
+                        </oxy:PlotView.Series>
+                    </oxy:PlotView>
+
+                    <oxy:PlotView x:Name="Plot2" Title="{Binding Title}" Margin="33,321,496,61">
+                        <oxy:PlotView.Axes>
+                            <oxy:LinearAxis Position="Bottom" Minimum="1" Maximum="20" />
+                            <oxy:LinearAxis Position="Left" Minimum="0" Maximum="2000" />
+                        </oxy:PlotView.Axes>
+                        <oxy:PlotView.Series>
+                            <oxy:LineSeries ItemsSource="{Binding Points2}"/>
+                        </oxy:PlotView.Series>
+                    </oxy:PlotView>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Cockpit" Margin="-1,0,-3,-2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Viewbox Name="myViewBox2" Grid.Column="0" VerticalAlignment="Center"
+								 HorizontalAlignment="Center" Margin="10,10,10,10">
+                            <Grid Name="grid1">
+                                <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
+                                <Path Stroke="Black" StrokeThickness="3"
+									  Data="M100,3 L100,197 90, 190 M100,197 L110, 190 ">
+                                    <Path.RenderTransform>
+                                        <RotateTransform x:Name="transF" CenterX="100" CenterY="100"
+														 Angle="{Binding YawAngle,Converter={StaticResource MathConv},
+																ConverterParameter=@VALUE-180}" />
+                                    </Path.RenderTransform>
+                                </Path>
+                            </Grid>
+                        </Viewbox>
+                        <Viewbox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
+								 Margin="10,10,10,10">
+                            <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
+
+                        </Viewbox>
+                        <Viewbox Name="myViewBox1" Grid.Column="1" VerticalAlignment="Center"
+								 HorizontalAlignment="Center" Margin="10,10,10,10">
+                            <Path Stroke="Black" StrokeThickness="1" Fill="Blue">
+                                <Path.Data>
+                                    <CombinedGeometry GeometryCombineMode="Exclude">
+                                        <CombinedGeometry.Geometry1>
+                                            <EllipseGeometry Center="100,100" RadiusX="100" RadiusY="100" />
+                                        </CombinedGeometry.Geometry1>
+                                        <CombinedGeometry.Geometry2>
+                                            <RectangleGeometry>
+                                                <RectangleGeometry.Rect>
+                                                    <Rect X="0" Y="0" Width="200" Height="100" />
+                                                </RectangleGeometry.Rect>
+                                                <RectangleGeometry.Transform>
+                                                    <TransformGroup>
+                                                        <!--<ScaleTransform ScaleX="1" ScaleY="1" />-->
+                                                        <ScaleTransform ScaleY="{Binding Path = PitchAngleScaled}" />
+                                                    </TransformGroup>
+                                                </RectangleGeometry.Transform>
+                                            </RectangleGeometry>
+                                        </CombinedGeometry.Geometry2>
+                                    </CombinedGeometry>
+                                </Path.Data>
+                                <Path.RenderTransform>
+                                    <RotateTransform CenterX="100" CenterY="100"
+													 Angle="{Binding Path = RollAngle}" />
+                                </Path.RenderTransform>
+                            </Path>
+                        </Viewbox>
+                    </Grid>
+
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Viewbox Grid.Column="0" HorizontalAlignment="Center" Margin="10">
+                            <Label x:Name="lblHeading" 
+								   Content="{Binding Path = YawAngle}" ContentStringFormat="Yaw/Heading(deg)  : {0:0}" />
+                        </Viewbox>
+                        <Viewbox Grid.Column="1" HorizontalAlignment="Right" Margin="10">
+                            <Label Name="lblRollAngle" Grid.Column="1" 
+								   Content="{Binding Path = RollAngle}" ContentStringFormat="Roll(deg)  : {0:0}" />
+                        </Viewbox>
+                        <Viewbox Grid.Column="2" HorizontalAlignment="Left" Margin="10">
+                            <Label Name="lblPitchAngle" Grid.Column="2" 
+								   Content="{Binding Path = PitchAngle}" ContentStringFormat="Pitch(deg)  : {0:0}" />
+                        </Viewbox>
+                    </Grid>
+                </Grid>
+            </TabItem>
+
+
+
+            <TabItem Header="Waypoints" Margin="3,0,-3,-2" HorizontalAlignment="Left" Width="72">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*"/>
+                        <ColumnDefinition Width="905*"/>
+                    </Grid.ColumnDefinitions>
+                    <wpf:Map CredentialsProvider="AuGq1IpRonJ0OYaOBJov8GQpArr3-xYLfJa5Ant1i3IjTvSvQMs1Tp_nrVzwO0pn" x:Name="myMap"
+                    MouseDoubleClick="MapWithPushpins_MouseDoubleClick" Center="47.339269,8.443275,0.0000" ZoomLevel="17.0" AnimationLevel="None" Mode="AerialWithLabels" Margin="0,0,237,0" Grid.ColumnSpan="2" ></wpf:Map>
+                    <!--<wpf:Pushpin Location="47.339269,8.443275"/>-->
+                    <wpf:Pushpin  Location="{Binding Path = CurrentLocation}"  Background="#FB0808"/>
+
+                    <Label x:Name="currLongLabel" Content="{Binding Path = Longitude}" ContentStringFormat="Longitude in ° N : {0:F7} " HorizontalAlignment="Left" Margin="689.108,53,0,0" VerticalAlignment="Top" Width="195" Grid.Column="1"/>
+                    <Label x:Name="currLatLabel" Content="{Binding Path = Latitude}" ContentStringFormat="Latitude in ° E : {0:F7}" HorizontalAlignment="Left" Margin="689.108,95,0,0" VerticalAlignment="Top" Width="195" Grid.Column="1"/>
+
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+
+        <!-- Button -->
+        <StackPanel Grid.Column="2">
+            <ComboBox x:Name="cmbComSelect" Style="{StaticResource MyCombobox}" Margin="0,25,0,5"
+					  RenderTransformOrigin="0.47,1.867" />
+            <Button Name="btnOpen"  Content="Open COM Port" Style="{StaticResource MyButton}" Click="BtnPortOpen_Click" />
+            <Button Name="btnClose" Content="Close COM Port" Style="{StaticResource MyButton}" Click="BtnPortClose_Click" />
+
+        </StackPanel>
+
+        <!-- Statusbar -->
+        <Grid Grid.Row="1" Grid.ColumnSpan="3">
+            <Rectangle Fill="LightGray"/>
+            <Label Grid.Row="1" Content="Status: " Style="{StaticResource LabelStatus}"   />
+            <Label Name="lblStatus" Grid.Row="1" Content="{Binding Status}" Style="{StaticResource LabelStatus}" Margin="70, 0, 0, 0" Width="500" />
+        </Grid>
+    </Grid>
+</Window>
