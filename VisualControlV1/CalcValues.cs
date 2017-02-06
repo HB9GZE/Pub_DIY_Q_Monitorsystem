@@ -34,8 +34,7 @@ namespace VisualControlV1
         private double currentVoltage = 16.0;
         private double[] currentVoltageArray = new double[20];
         int currentArrayCounter = 0;
-        private double[] dechargeArray = new double[20];
-        int dechargeArrayCounter = 0;
+
         private int dechargeMAH;
         private IList<DataPoint> points;
         private IList<DataPoint> points2;
@@ -47,6 +46,10 @@ namespace VisualControlV1
         private double longitude;
         private double latitude;
 
+        private double setHeading;
+        private double altPressure;
+        private double altGPS;
+
         private Location currentLocation;
 
         public Location CurrentLocation
@@ -56,6 +59,34 @@ namespace VisualControlV1
             {
                 currentLocation = value;
                 NotifyChangedValue(new PropertyChangedEventArgs("CurrentLocation"));
+            }
+        }
+
+        public double SetHeading
+        {
+            get { return longitude; }
+            set
+            {
+                setHeading = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("SetHeading"));
+            }
+        }
+        public double AltPressure
+        {
+            get { return altPressure; }
+            set
+            {
+                longitude = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("AltPressure"));
+            }
+        }
+        public double AltGPS
+        {
+            get { return altGPS; }
+            set
+            {
+                longitude = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("AltGPS"));
             }
         }
 
@@ -140,15 +171,7 @@ namespace VisualControlV1
             }
         }
 
-        public int DechargeMAH
-        {
-            get { return dechargeMAH; }
-            set
-            {
-                dechargeMAH = value;
-                NotifyChangedValue(new PropertyChangedEventArgs("DechargeMAH"));
-            }
-        }
+
 
         public double CurrentVoltage
         {
@@ -259,33 +282,8 @@ namespace VisualControlV1
             //Console.Out.WriteLine("This is the Timer3Count: ", Timer3Count);
         }
 
-        public void calculateDischargeValue(ReceivedRawData data)
-        {
-            DechargeMAH = MathHelper.MakeInt(data.MahMsb, data.MahLsb)/50;
-            Console.Out.WriteLine("This is the discharge in mAh: " + DechargeMAH);
 
-            int i = 0;
-            while (i < 19)
-            {
-                dechargeArray[i] = dechargeArray[i + 1];
-                i++;
-            }
-            dechargeArray[19] = DechargeMAH;
-
-            List<DataPoint> myPoints = new List<DataPoint>();
-
-            i = 0;
-            while (i < 20)
-            {
-                myPoints.Add(new DataPoint(i + 1, dechargeArray[i]));
-                i++;
-            }
-
-            Points2 = myPoints;
-       
-    }
-
-        public void calculateCurrentCurrent(ReceivedRawData data)
+        public void calculateCurrentVoltage(ReceivedRawData data)
         {
             CurrentVoltage = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb) - 2047)*0.0078;
             Console.Out.WriteLine("This is the current voltage: " + CurrentVoltage);
@@ -341,8 +339,7 @@ namespace VisualControlV1
         public void OnNext(ReceivedRawData value)
         {
             calculateTimer3Count(value);
-            calculateCurrentCurrent(value);
-            calculateDischargeValue(value);
+            calculateCurrentVoltage(value);
             showAnglesInCockpit(value);
             showLonLatInWaypoints(value);
         }

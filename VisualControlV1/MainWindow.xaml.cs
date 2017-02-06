@@ -109,6 +109,36 @@ namespace VisualControlV1
             }
         }
 
+        private void button_Click_North(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click_South(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click_West(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click_East(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click_Hold(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void button_Click_Landing(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]

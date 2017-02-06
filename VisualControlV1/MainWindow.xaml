@@ -42,9 +42,9 @@
                         </Grid.ColumnDefinitions>
                     </Grid>
 
-                    <Viewbox Name="myViewBox01" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="370" Margin="25,25" Width="370" >
+                    <Viewbox Name="myViewBox01" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="370" Margin="30,0" Width="370" >
                         <Grid Name="grid01">
-                            <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
+                            <Ellipse Stroke="Black" StrokeThickness="1" Fill="LightGreen" Width="200" Height="200" />
                             <Path Stroke="Black" StrokeThickness="3" Data="M100,3 L100,197 90, 190 M100,197 L110, 190 ">
                                 <Path.RenderTransform>
                                     <RotateTransform x:Name="transView01" CenterX="100" CenterY="100"
@@ -56,13 +56,13 @@
                     </Viewbox>
 
                     <Viewbox Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center"
-								 HorizontalAlignment="Right" Height="370" Margin="0,0,25,0" Width="370">
-                        <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
+								 HorizontalAlignment="Right" Height="370" Margin="0,0,30,0" Width="370">
+                        <Ellipse Stroke="Black" StrokeThickness="1" Fill="LightBlue" Width="200" Height="200" />
                     </Viewbox>
 
                     <Viewbox Name="myViewBox03" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center"
-								 HorizontalAlignment="Right" Height="370" Margin="0,0,25,0" Width="370">
-                        <Path Stroke="Black" StrokeThickness="1" Fill="Blue">
+								 HorizontalAlignment="Right" Height="370" Margin="0,0,30,0" Width="370">
+                        <Path Stroke="Black" StrokeThickness="1" Fill="LightGreen">
                             <Path.Data>
                                 <CombinedGeometry GeometryCombineMode="Exclude">
                                     <CombinedGeometry.Geometry1>
@@ -91,10 +91,37 @@
                     </Viewbox>
 
 
-                    <Label x:Name="labelVoltage" Style="{StaticResource MyLabelVoltage}" ContentStringFormat="Voltage is [V]:  {0:F1}"  Content="{Binding CurrentVoltage }" HorizontalAlignment="Center" Height="50" Margin="26,100,10.333,0" VerticalAlignment="Top" Width="265" Grid.Row ="0" Grid.Column="1"/>
-                    <Label x:Name="label5" Style="{StaticResource MyLabel}" ContentStringFormat="Decharging is [mAh]:  {0}" Content="{Binding DechargeMAH}" HorizontalAlignment="Left" Height="34" Margin="72,215,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+                    <Label x:Name="labelVoltage" Style="{StaticResource MyLabelVoltage}" Background="LightCoral" ContentStringFormat="Voltage is:  {0:F1}  Volt"  Content="{Binding CurrentVoltage }" HorizontalAlignment="Center" Height="50" Margin="26,100,10.333,0" VerticalAlignment="Top" Width="265" Grid.Row ="0" Grid.Column="1"/>
+
+                    <Label x:Name="labelYaw" Style="{StaticResource MyLabel}" Background="LightGreen" ContentStringFormat="Yaw:  {0} Deg" Content="{Binding YawAngle}" HorizontalAlignment="Left" Height="34" Margin="137,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+                    <Label x:Name="labelRoll" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Roll:  {0} Deg" Content="{Binding RollAngle}" HorizontalAlignment="Left" Height="34" Margin="752,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+                    <Label x:Name="labelPitch" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Pitch:  {0} Deg" Content="{Binding PitchAngle}" HorizontalAlignment="Left" Height="34" Margin="537,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+                    <Label x:Name="labelSetHeading" Style="{StaticResource MyLabel}" Background="LightGreen" ContentStringFormat="Set heading to:  {0} Deg" Content="{Binding SetHeading}" HorizontalAlignment="Left" Height="34" Margin="142,115,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+                    <Label x:Name="labelAltPressure" Style="{StaticResource MyLabel}" Background="LightYellow" ContentStringFormat="Alt Pressure:  {0:F1} m" Content="{Binding AltPressure}" HorizontalAlignment="Left" Height="34" Margin="147,240,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+                    <Label x:Name="labelAltGPS" Style="{StaticResource MyLabel}" Background="LightYellow" ContentStringFormat="Alt GPS:  {0:F1} m" Content="{Binding AltGPS}" HorizontalAlignment="Left" Height="34" Margin="147,285,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+
+                    <Button x:Name="buttonNorth" Style="{StaticResource MyButton}" Content="N" Margin="397,80,499,262.667" Click="button_Click_North" Background="LightGreen" Grid.Row ="1" Grid.Column="0" Width="50"/>
+                    <Button x:Name="buttonSouth" Style="{StaticResource MyButton}" Content="S" Margin="397,155,499,187.667" Click="button_Click_South" Background="LightGreen" Grid.Row ="1" Grid.Column="0" Width="50"/>
+                    <Button x:Name="buttonWest" Style="{StaticResource MyButton}" Content="W" Margin="337,115,559,227.667" Click="button_Click_West" Background="LightGreen" Grid.Row ="1" Grid.Column="0" Width="50"/>
+                    <Button x:Name="buttonEast" Style="{StaticResource MyButton}" Content="E" Margin="462,115,434,227.667" Click="button_Click_East" Background="LightGreen" Grid.Row ="1" Grid.Column="0" Width="50"/>
+
                     <Button x:Name="buttonStart" Style="{StaticResource MyButton}" Content="Start Motor" Margin="26,40,155.333,330" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="1"/>
                     <Button x:Name="buttonStop" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="166,40,15.333,330"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="1"/>
+
+                    <Button x:Name="buttonHold" Style="{StaticResource MyButton}" Content="Hold altitude" Margin="362,245,464,97.667" Click="button_Click_Hold" Background="LightYellow" Grid.Row ="1" Grid.Column="0">
+                        <!--<Button.Triggers>
+                            <EventTrigger RoutedEvent="MouseEnter">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" To="Red"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>-->
+                    </Button>
+
+
+                    <Button x:Name="buttonLanding" Style="{StaticResource MyButton}" Content="Auto landing" Margin="512,245,314,97.667" Click="button_Click_Landing" Background="LightYellow" Grid.Row ="1" Grid.Column="0" />
 
                 </Grid>
             </TabItem>
@@ -232,7 +259,7 @@
         <StackPanel Grid.Column="2">
             <ComboBox x:Name="cmbComSelect" Style="{StaticResource MyCombobox}" Margin="0,25,0,5"
 					  RenderTransformOrigin="0.47,1.867" />
-            <Button Name="btnOpen"  Style="{StaticResource MyButton}" Content="Open COM Port"  Click="BtnPortOpen_Click" />
+            <Button Name="btnOpen"  Style="{StaticResource MyButton}" Content="Open COM Port"  Click="button_Click_North" />
             <Button Name="btnClose" Style="{StaticResource MyButton}" Content="Close COM Port"  Click="BtnPortClose_Click" />
 
         </StackPanel>
