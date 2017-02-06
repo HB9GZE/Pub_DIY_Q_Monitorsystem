@@ -210,7 +210,7 @@ namespace VisualControlV1
             Longitude = (double)(data.LonB4 + data.LonB3*256 + data.LonB2*256*256 + data.LonB1*256*256*256)/10000000;
             Latitude = (double)(data.LatB4 + data.LatB3 * 256 + data.LatB2 * 65536 + data.LatB1 * 16777216)/10000000;
             CurrentLocation = new Location(Latitude,Longitude);
-            Console.Out.WriteLine("This is the Longitude: " + data.LonB4);
+            //Console.Out.WriteLine("This is the Longitude: " + data.LonB4);
 
             //Location pinLocation = myMap.ViewportPointToLocation(CurrentLocation);
 
@@ -220,9 +220,6 @@ namespace VisualControlV1
 
             //// Adds the pushpin to the map.
             //myMap.Children.Add(pin);
-
-
-
         }
 
 
