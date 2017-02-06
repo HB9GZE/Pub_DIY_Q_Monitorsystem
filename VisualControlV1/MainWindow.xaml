@@ -13,7 +13,7 @@
         <local:MathConverter x:Key="MathConv" />
     </Window.Resources>
 
-    <Grid Name="myGrid">
+    <Grid Name="myGrid"  ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="1*"/>
             <ColumnDefinition Width="140" />
@@ -26,20 +26,75 @@
 
         <TabControl Grid.Column="0" Margin="0,0,0,0" SelectedIndex="0" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Control View" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
-                <Grid Margin="0,0,0,0">
+                <Grid Margin="0,0,0,0" ShowGridLines="True">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="942*"/>
                         <ColumnDefinition Width="300*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="340*" />
-                        <RowDefinition Height="473*" />
+                        <RowDefinition Height="140*" />
+                        <RowDefinition Height="131*" />
                     </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" ShowGridLines="True" Margin="0,0,0,5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+
+                    <Viewbox Name="myViewBox01" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="370" Margin="25,25" Width="370" >
+                        <Grid Name="grid01">
+                            <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
+                            <Path Stroke="Black" StrokeThickness="3" Data="M100,3 L100,197 90, 190 M100,197 L110, 190 ">
+                                <Path.RenderTransform>
+                                    <RotateTransform x:Name="transView01" CenterX="100" CenterY="100"
+														 Angle="{Binding YawAngle,Converter={StaticResource MathConv},
+																ConverterParameter=@VALUE-180}" />
+                                </Path.RenderTransform>
+                            </Path>
+                        </Grid>
+                    </Viewbox>
+
+                    <Viewbox Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center"
+								 HorizontalAlignment="Right" Height="370" Margin="0,0,25,0" Width="370">
+                        <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
+                    </Viewbox>
+
+                    <Viewbox Name="myViewBox03" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center"
+								 HorizontalAlignment="Right" Height="370" Margin="0,0,25,0" Width="370">
+                        <Path Stroke="Black" StrokeThickness="1" Fill="Blue">
+                            <Path.Data>
+                                <CombinedGeometry GeometryCombineMode="Exclude">
+                                    <CombinedGeometry.Geometry1>
+                                        <EllipseGeometry Center="100,100" RadiusX="100" RadiusY="100" />
+                                    </CombinedGeometry.Geometry1>
+                                    <CombinedGeometry.Geometry2>
+                                        <RectangleGeometry>
+                                            <RectangleGeometry.Rect>
+                                                <Rect X="0" Y="0" Width="200" Height="100" />
+                                            </RectangleGeometry.Rect>
+                                            <RectangleGeometry.Transform>
+                                                <TransformGroup>
+                                                    <!--<ScaleTransform ScaleX="1" ScaleY="1" />-->
+                                                    <ScaleTransform ScaleY="{Binding Path = PitchAngleScaled}" />
+                                                </TransformGroup>
+                                            </RectangleGeometry.Transform>
+                                        </RectangleGeometry>
+                                    </CombinedGeometry.Geometry2>
+                                </CombinedGeometry>
+                            </Path.Data>
+                            <Path.RenderTransform>
+                                <RotateTransform CenterX="100" CenterY="100"
+													 Angle="{Binding Path = RollAngle}" />
+                            </Path.RenderTransform>
+                        </Path>
+                    </Viewbox>
+
 
                     <Label x:Name="labelVoltage" Style="{StaticResource MyLabelVoltage}" ContentStringFormat="Voltage is [V]:  {0:F1}"  Content="{Binding CurrentVoltage }" HorizontalAlignment="Center" Height="50" Margin="26,100,10.333,0" VerticalAlignment="Top" Width="265" Grid.Row ="0" Grid.Column="1"/>
                     <Label x:Name="label5" Style="{StaticResource MyLabel}" ContentStringFormat="Decharging is [mAh]:  {0}" Content="{Binding DechargeMAH}" HorizontalAlignment="Left" Height="34" Margin="72,215,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
-                    <Button x:Name="buttonStart" Style="{StaticResource MyButton}" Content="Start Motor" Margin="26,40,155.333,250" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="1"/>
-                    <Button x:Name="buttonStop" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="166,40,15.333,250"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="1"/>
+                    <Button x:Name="buttonStart" Style="{StaticResource MyButton}" Content="Start Motor" Margin="26,40,155.333,330" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="1"/>
+                    <Button x:Name="buttonStop" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="166,40,15.333,330"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="1"/>
 
                 </Grid>
             </TabItem>
@@ -81,13 +136,13 @@
                             <ColumnDefinition Width="620*" />
                         </Grid.ColumnDefinitions>
                         <Viewbox Name="myViewBox2" Grid.Column="0" VerticalAlignment="Center"
-								 HorizontalAlignment="Center" Margin="10,81,9.999,81" Grid.ColumnSpan="3">
-                            <Grid Name="grid1">
+								 HorizontalAlignment="Center"  Grid.ColumnSpan="3">
+                            <Grid Name="grid2">
                                 <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
                                 <Path Stroke="Black" StrokeThickness="3"
 									  Data="M100,3 L100,197 90, 190 M100,197 L110, 190 ">
                                     <Path.RenderTransform>
-                                        <RotateTransform x:Name="transF" CenterX="100" CenterY="100"
+                                        <RotateTransform x:Name="transF2" CenterX="100" CenterY="100"
 														 Angle="{Binding YawAngle,Converter={StaticResource MathConv},
 																ConverterParameter=@VALUE-180}" />
                                     </Path.RenderTransform>
