@@ -6,21 +6,17 @@
         xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:local="clr-namespace:VisualControlV1"
         xmlns:wpf="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
-
         mc:Ignorable="d"
 		WindowStartupLocation="CenterScreen" Width="1400" Height="900" Name="myWindow">
-
 
     <Window.Resources>
         <local:MathConverter x:Key="MathConv" />
     </Window.Resources>
 
-
     <Grid Name="myGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition Width="0"/>
-            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width ="1*"/>
+            <ColumnDefinition Width="140" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -28,8 +24,8 @@
         </Grid.RowDefinitions>
         <Line Grid.Row="1" X2="1" VerticalAlignment="Top" Stroke="Gray" Stretch="Fill" Height="1" />
 
-        <TabControl Grid.Column="0" Margin="10,0,108,1" SelectedIndex="2" SelectionChanged="TabControl_SelectionChanged" Grid.ColumnSpan="3">
-            <TabItem Header="Motorcontroller Settings" Height="22" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="146">
+        <TabControl Grid.Column="0" Margin="0,0,8.333,0.667" SelectedIndex="0" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Control View" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid Margin="10,0,-10,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="340*"/>
@@ -38,34 +34,16 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
-                    <Slider x:Name="slider3" Value="17" HorizontalAlignment="Left" Margin="64,44,0,0" VerticalAlignment="Top" Height="40" Width="422" Maximum="255" TickFrequency="10" TickPlacement="BottomRight" Background="#FF0E8AF1" ValueChanged="slider3_ValueChanged" BorderBrush="#FFFDFDFD" AutoToolTipPlacement="BottomRight" SmallChange="2" LargeChange="2"/>
-                    <Label x:Name="label33" ContentStringFormat="PWM is:   {0:0}" Content="{Binding ElementName=slider3, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="520,44,0,0" VerticalAlignment="Top" Width="184"/>
-                    <Slider x:Name="slider4" Value="90" HorizontalAlignment="Left" Margin="64,130,0,0" VerticalAlignment="Top" Height="40" Width="422" Maximum="180" TickFrequency="10" TickPlacement="BottomRight" Background="#FF0E8AF1" ValueChanged="slider4_ValueChanged" BorderBrush="#FFFDFDFD" AutoToolTipPlacement="BottomRight"/>
-                    <Label x:Name="label44" ContentStringFormat="Roll is:   {0:0}" Content="{Binding ElementName=slider4, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="520,136,0,0" VerticalAlignment="Top" Width="184"/>
-                    <Slider x:Name="slider5" Value="90" HorizontalAlignment="Left" Margin="64,237,0,0" VerticalAlignment="Top" Height="40" Width="422" Maximum="180" TickFrequency="10" TickPlacement="BottomRight" Background="#FF0E8AF1" ValueChanged="slider5_ValueChanged" BorderBrush="#FFFDFDFD" AutoToolTipPlacement="BottomRight"/>
-                    <Label x:Name="label55" ContentStringFormat="Pitch is:   {0:0}" Content="{Binding ElementName=slider5, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="520,237,0,0" VerticalAlignment="Top" Width="184"/>
-                    <Slider x:Name="slider1" Value="12" HorizontalAlignment="Left" Margin="64,341,0,0" VerticalAlignment="Top" Height="40" Width="422" Maximum="255" TickFrequency="10" TickPlacement="BottomRight" Background="#FF0E8AF1" ValueChanged="slider1_ValueChanged" BorderBrush="#FFFDFDFD" AutoToolTipPlacement="BottomRight"/>
-                    <Label x:Name="label" ContentStringFormat="Yaw is:   {0:0}" Content="{Binding ElementName=slider1, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="520,347,0,0" VerticalAlignment="Top" Width="184"/>
-                    <Slider x:Name="slider2" HorizontalAlignment="Left" Margin="64,422,0,0" VerticalAlignment="Top" Width="243" Background="#FF189B0B" Maximum="255" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="slider2_ValueChanged" Height="34"  Cursor="Arrow" Value="128"/>
-                    <Label x:Name="label2" ContentStringFormat="OC5 offset 0x234 is:   {0:0}" Content="{Binding ElementName=slider2, Path=Value, UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left" Height="34" Margin="342,422,0,0" VerticalAlignment="Top" Width="184"/>
-
-                    <Label x:Name="label4" ContentStringFormat="Current is [A]:  {0:F1}"  Content="{Binding CurrentCurrent }" HorizontalAlignment="Left" Height="34" Margin="64,544,0,0" VerticalAlignment="Top" Width="160"/>
-                    <Label x:Name="label5" ContentStringFormat="Decharging is [mAh]:  {0}" Content="{Binding DechargeMAH}" HorizontalAlignment="Left" Height="34" Margin="366,544,0,0" VerticalAlignment="Top" Width="160"/>
-
-                    <Image x:Name="image1" Source="Sources/kompass.png" TouchUp="MyTouchDownAndUp" TouchDown="MyTouchDownAndUp" TouchMove="MyTouchMove"
-                           HorizontalAlignment="Center" VerticalAlignment="Bottom"  RenderTransformOrigin=".5,.5" Grid.ColumnSpan="2" Margin="731,0,10,0" >
-                        <Image.RenderTransform>
-                            <RotateTransform Angle="{Binding NewAngle}" />
-                        </Image.RenderTransform>
-                    </Image>
-                    <Button x:Name="buttonStart" Content="Start Motorr" Grid.Column="1" Margin="105,35,107,524" Click="button_Click_Start" BorderBrush="#FF42EC11" Background="#FF42EC11"/>
-                    <Button x:Name="buttonStop" Content="Stop Motor" Grid.Column="1" Margin="105,117,107,438" Click="button_Click_Stop" BorderBrush="#FFEC1157" Background="#FFEC1157"/>
+                    <Label x:Name="label4" Style="{StaticResource MyLabel}" ContentStringFormat="Current is [A]:  {0:F1}"  Content="{Binding CurrentCurrent }" HorizontalAlignment="Left" Height="34" Margin="64,544,0,0" VerticalAlignment="Top" Width="160"/>
+                    <Label x:Name="label5" Style="{StaticResource MyLabel}" ContentStringFormat="Decharging is [mAh]:  {0}" Content="{Binding DechargeMAH}" HorizontalAlignment="Left" Height="34" Margin="366,544,0,0" VerticalAlignment="Top" Width="160"/>
+                    <Button x:Name="buttonStart" Style="{StaticResource MyButton}" Content="Start Motor" Margin="72,45,187.333,717" Click="button_Click_Start" Background="#FF42EC11" Grid.Column="1"/>
+                    <Button x:Name="buttonStop" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="217,45,42.333,717" Click="button_Click_Stop"  Background="#FFEC1157" Grid.Column="1"/>
 
                 </Grid>
             </TabItem>
             <TabItem Header="Graphs">
                 <Grid Name="myGrid2">
-                    <oxy:PlotView x:Name="Plot1" Title="{Binding Title}" Margin="33,36,496,346">
+                    <oxy:PlotView x:Name="Plot1" Title="{Binding Title}" Margin="33,36,117.333,522">
                         <oxy:PlotView.Axes>
                             <oxy:LinearAxis Position="Bottom" Minimum="1" Maximum="20" />
                             <oxy:LinearAxis Position="Left" Minimum="0" Maximum="6" />
@@ -75,7 +53,7 @@
                         </oxy:PlotView.Series>
                     </oxy:PlotView>
 
-                    <oxy:PlotView x:Name="Plot2" Title="{Binding Title}" Margin="33,321,496,61">
+                    <oxy:PlotView x:Name="Plot2" Title="{Binding Title}" Margin="33,321,112.333,167">
                         <oxy:PlotView.Axes>
                             <oxy:LinearAxis Position="Bottom" Minimum="1" Maximum="20" />
                             <oxy:LinearAxis Position="Left" Minimum="0" Maximum="2000" />
@@ -95,11 +73,13 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="37*" />
+                            <ColumnDefinition Width="49*"/>
+                            <ColumnDefinition Width="533*"/>
+                            <ColumnDefinition Width="620*" />
                         </Grid.ColumnDefinitions>
                         <Viewbox Name="myViewBox2" Grid.Column="0" VerticalAlignment="Center"
-								 HorizontalAlignment="Center" Margin="10,10,10,10">
+								 HorizontalAlignment="Center" Margin="10,81,9.999,81" Grid.ColumnSpan="3">
                             <Grid Name="grid1">
                                 <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
                                 <Path Stroke="Black" StrokeThickness="3"
@@ -112,13 +92,13 @@
                                 </Path>
                             </Grid>
                         </Viewbox>
-                        <Viewbox Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"
-								 Margin="10,10,10,10">
+                        <Viewbox Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"
+								 Margin="10.001,81,9.999,81">
                             <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
 
                         </Viewbox>
-                        <Viewbox Name="myViewBox1" Grid.Column="1" VerticalAlignment="Center"
-								 HorizontalAlignment="Center" Margin="10,10,10,10">
+                        <Viewbox Name="myViewBox1" Grid.Column="3" VerticalAlignment="Center"
+								 HorizontalAlignment="Center" Margin="10.001,81,9.999,81">
                             <Path Stroke="Black" StrokeThickness="1" Fill="Blue">
                                 <Path.Data>
                                     <CombinedGeometry GeometryCombineMode="Exclude">
@@ -195,8 +175,8 @@
         <StackPanel Grid.Column="2">
             <ComboBox x:Name="cmbComSelect" Style="{StaticResource MyCombobox}" Margin="0,25,0,5"
 					  RenderTransformOrigin="0.47,1.867" />
-            <Button Name="btnOpen"  Content="Open COM Port" Style="{StaticResource MyButton}" Click="BtnPortOpen_Click" />
-            <Button Name="btnClose" Content="Close COM Port" Style="{StaticResource MyButton}" Click="BtnPortClose_Click" />
+            <Button Name="btnOpen"  Style="{StaticResource MyButton}" Content="Open COM Port"  Click="BtnPortOpen_Click" />
+            <Button Name="btnClose" Style="{StaticResource MyButton}" Content="Close COM Port"  Click="BtnPortClose_Click" />
 
         </StackPanel>
 
@@ -204,7 +184,7 @@
         <Grid Grid.Row="1" Grid.ColumnSpan="3">
             <Rectangle Fill="LightGray"/>
             <Label Grid.Row="1" Content="Status: " Style="{StaticResource LabelStatus}"   />
-            <Label Name="lblStatus" Grid.Row="1" Content="{Binding Status}" Style="{StaticResource LabelStatus}" Margin="70, 0, 0, 0" Width="500" />
+            <Label Name="lblStatus" Style="{StaticResource LabelStatus}" Content="{Binding Status}"  Margin="70, 0, 0, 0" Width="730" />
         </Grid>
     </Grid>
 </Window>

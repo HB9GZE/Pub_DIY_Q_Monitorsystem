@@ -6,31 +6,46 @@
     <Application.Resources>
  
             <Style TargetType="Button" x:Key="MyButton" >
-                <Setter Property="Height" Value="20"/>
-                <Setter Property="Width" Value="100"/>
-                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="Height" Value="50"/>
+                <Setter Property="Width" Value="120"/>
+                <Setter Property="FontSize" Value="12"/>
                 <Setter Property="Margin" Value="5"/>
-                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="BorderThickness" Value="2"/>
+               <Setter Property="VerticalAlignment" Value="Center"/>
+               <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
+        
             <Style TargetType="ComboBox" x:Key="MyCombobox" >
-                <Setter Property="Height" Value="20"/>
-                <Setter Property="Width" Value="100"/>
-                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="120"/>
+                <Setter Property="FontSize" Value="12"/>
                 <Setter Property="Margin" Value="5"/>
-                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+               <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
-            <Style TargetType="Label" x:Key="LabelStatus">
+
+            <Style TargetType="Label" x:Key="MyLabel">
                 <Setter Property="Height" Value="30"/>
                 <Setter Property="Width" Value="50"/>
                 <Setter Property="FontSize" Value="12"/>
                 <Setter Property="Margin" Value="5"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Background" Value ="LightGray"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        
+           <Style TargetType="Label" x:Key="LabelStatus">
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="50"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+
             </Style>
-
-
-      
-
 
     </Application.Resources>
 </Application>

@@ -125,54 +125,44 @@ namespace VisualControlV1
         }
 
 
-        private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (initializing) return;
-            byte myDummyByte;
-            myDummyByte = Convert.ToByte(slider1.Value);
-            try
-            {
-                mySerialCom.MySerialPort.Write("#yaw2/");
-                mySerialCom.WriteByte(myDummyByte);
-                mySerialCom.WriteByte(myDummyByte);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Open com port first!.", "Important Message");
-            }
-        }
+        ///// <summary>
+        ///// 
+        ///// </summary>
+        ///// <param name="sender"></param>
+        ///// <param name="e"></param>
+        //private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        //{
+        //    if (initializing) return;
+        //    byte myDummyByte;
+        //    myDummyByte = Convert.ToByte(slider1.Value);
+        //    try
+        //    {
+        //        mySerialCom.MySerialPort.Write("#yaw2/");
+        //        mySerialCom.WriteByte(myDummyByte);
+        //        mySerialCom.WriteByte(myDummyByte);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        MessageBox.Show("Open com port first!.", "Important Message");
+        //    }
+        //}
 
-        private void slider2_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (initializing) return;
-            byte myDummyByte;
-            myDummyByte = (byte) (Convert.ToByte(slider2.Value) + 1);
-            try
-            {
-                mySerialCom.MySerialPort.Write("#oco2/");
-                mySerialCom.WriteByte(myDummyByte);
-                mySerialCom.WriteByte(myDummyByte);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Open com port first!.", "Important Message");
-            }
-        }
 
-        private void MyTouchMove(object sender, TouchEventArgs e)
-        {
-            Point myTouchPoint = e.GetTouchPoint(this).Position;
-            myCalcValues.calcNewAngle(myTouchPoint.X, myTouchPoint.Y);
 
-            //GeneralTransform generalTransform = image1.TransformToVisual(this);
-            //Point point = generalTransform.Transform(new Point());
-            //Debug.WriteLine(point.X + " " + point.Y);
-        }
+        //private void MyTouchMove(object sender, TouchEventArgs e)
+        //{
+        //    Point myTouchPoint = e.GetTouchPoint(this).Position;
+        //    myCalcValues.calcNewAngle(myTouchPoint.X, myTouchPoint.Y);
 
-        private void MyTouchDownAndUp(object sender, TouchEventArgs e)
-        {
-            myCalcValues.resetNewAngle();
-        }
+        //    //GeneralTransform generalTransform = image1.TransformToVisual(this);
+        //    //Point point = generalTransform.Transform(new Point());
+        //    //Debug.WriteLine(point.X + " " + point.Y);
+        //}
+
+        //private void MyTouchDownAndUp(object sender, TouchEventArgs e)
+        //{
+        //    myCalcValues.resetNewAngle();
+        //}
 
         void addNewPolygon()
         {
@@ -242,64 +232,19 @@ namespace VisualControlV1
         }
 
 
-        private void slider3_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (initializing) return;
-            byte myDummyByte;
-            myDummyByte = Convert.ToByte(slider3.Value);
-            try
-            {
-                mySerialCom.MySerialPort.Write("#pwm2/");
-                mySerialCom.WriteByte(myDummyByte);
-                mySerialCom.WriteByte(myDummyByte);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Open com port first!.", "Important Message");
-            }
-        }
 
-        private void slider4_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (initializing) return;
-            byte myDummyByte;
-            myDummyByte = Convert.ToByte(slider4.Value);
-            try
-            {
-                mySerialCom.MySerialPort.Write("#rol2/");
-                mySerialCom.WriteByte(myDummyByte);
-                mySerialCom.WriteByte(myDummyByte);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Open com port first!.", "Important Message");
-            }
-        }
 
-        private void slider5_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (initializing) return;
-            byte myDummyByte;
-            myDummyByte = Convert.ToByte(slider5.Value);
-            try
-            {
-                mySerialCom.MySerialPort.Write("#pit2/");
-                mySerialCom.WriteByte(myDummyByte);
-                mySerialCom.WriteByte(myDummyByte);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Open com port first!.", "Important Message");
-            }
-        }
+
+
+
 
         private void button_Click_Start(object sender, RoutedEventArgs e)
         {
             try
             {
                 mySerialCom.MySerialPort.Write("#sta2/");
-                slider3.Value = 17;
-                slider3.ValueChanged += new RoutedPropertyChangedEventHandler<double>(slider3_ValueChanged);
+                //slider3.Value = 17;
+                //slider3.ValueChanged += new RoutedPropertyChangedEventHandler<double>(slider3_ValueChanged);
                 mySerialCom.WriteByte(0x10);
                 mySerialCom.WriteByte(0x10);
             }
