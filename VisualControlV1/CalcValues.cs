@@ -31,8 +31,8 @@ namespace VisualControlV1
         private short timer3Count = 1333;
         private double deltaX, deltaY, oldDeltaX, oldDeltaY;
         private int touchPointCounter;
-        private double currentCurrent = 8.4;
-        private double[] currentCurrentArray = new double[20];
+        private double currentVoltage = 16.0;
+        private double[] currentVoltageArray = new double[20];
         int currentArrayCounter = 0;
         private double[] dechargeArray = new double[20];
         int dechargeArrayCounter = 0;
@@ -150,13 +150,13 @@ namespace VisualControlV1
             }
         }
 
-        public double CurrentCurrent
+        public double CurrentVoltage
         {
-            get { return currentCurrent; }
+            get { return currentVoltage; }
             set
             {
-                currentCurrent = value;
-                NotifyChangedValue(new PropertyChangedEventArgs("CurrentCurrent"));
+                currentVoltage = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("CurrentVoltage"));
             }
         }
 
@@ -287,23 +287,23 @@ namespace VisualControlV1
 
         public void calculateCurrentCurrent(ReceivedRawData data)
         {
-            CurrentCurrent = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb) - 2047)*0.0078;
-            Console.Out.WriteLine("This is the current current: " + CurrentCurrent);
+            CurrentVoltage = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb) - 2047)*0.0078;
+            Console.Out.WriteLine("This is the current voltage: " + CurrentVoltage);
 
             int i = 0;
             while (i < 19)
             {
-                currentCurrentArray[i] = currentCurrentArray[i + 1];
+                currentVoltageArray[i] = currentVoltageArray[i + 1];
                 i++;
             }
-            currentCurrentArray[19] = CurrentCurrent;
+            currentVoltageArray[19] = CurrentVoltage;
 
             List<DataPoint> myPoints = new List<DataPoint>();
 
             i = 0;
             while (i < 20)
             {
-                myPoints.Add(new DataPoint(i + 1, currentCurrentArray[i]));
+                myPoints.Add(new DataPoint(i + 1, currentVoltageArray[i]));
                 i++;
             }
 

@@ -35,9 +35,22 @@
                 <Setter Property="Background" Value ="LightGray"/>
                 <Setter Property="VerticalAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
-        </Style>
-        
-           <Style TargetType="Label" x:Key="LabelStatus">
+            </Style>
+
+            <Style TargetType="Label" x:Key="MyLabelVoltage">
+                <Setter Property="Height" Value="50"/>
+                <Setter Property="Width" Value="200"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="BorderThickness" Value="2"/>
+                <Setter Property="Background" Value ="LightGray"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+
+        <Style TargetType="Label" x:Key="LabelStatus">
                 <Setter Property="Height" Value="30"/>
                 <Setter Property="Width" Value="50"/>
                 <Setter Property="FontSize" Value="12"/>

@@ -24,24 +24,26 @@
         </Grid.RowDefinitions>
         <Line Grid.Row="1" X2="1" VerticalAlignment="Top" Stroke="Gray" Stretch="Fill" Height="1" />
 
-        <TabControl Grid.Column="0" Margin="0,0,8.333,0.667" SelectedIndex="0" SelectionChanged="TabControl_SelectionChanged">
+        <TabControl Grid.Column="0" Margin="0,0,0,0" SelectedIndex="0" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Control View" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
-                <Grid Margin="10,0,-10,0">
+                <Grid Margin="0,0,0,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="340*"/>
-                        <ColumnDefinition Width="150*"/>
+                        <ColumnDefinition Width="942*"/>
+                        <ColumnDefinition Width="300*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="340*" />
+                        <RowDefinition Height="473*" />
                     </Grid.RowDefinitions>
-                    <Label x:Name="label4" Style="{StaticResource MyLabel}" ContentStringFormat="Current is [A]:  {0:F1}"  Content="{Binding CurrentCurrent }" HorizontalAlignment="Left" Height="34" Margin="64,544,0,0" VerticalAlignment="Top" Width="160"/>
-                    <Label x:Name="label5" Style="{StaticResource MyLabel}" ContentStringFormat="Decharging is [mAh]:  {0}" Content="{Binding DechargeMAH}" HorizontalAlignment="Left" Height="34" Margin="366,544,0,0" VerticalAlignment="Top" Width="160"/>
-                    <Button x:Name="buttonStart" Style="{StaticResource MyButton}" Content="Start Motor" Margin="72,45,187.333,717" Click="button_Click_Start" Background="#FF42EC11" Grid.Column="1"/>
-                    <Button x:Name="buttonStop" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="217,45,42.333,717" Click="button_Click_Stop"  Background="#FFEC1157" Grid.Column="1"/>
+
+                    <Label x:Name="labelVoltage" Style="{StaticResource MyLabelVoltage}" ContentStringFormat="Voltage is [V]:  {0:F1}"  Content="{Binding CurrentVoltage }" HorizontalAlignment="Center" Height="50" Margin="26,100,10.333,0" VerticalAlignment="Top" Width="265" Grid.Row ="0" Grid.Column="1"/>
+                    <Label x:Name="label5" Style="{StaticResource MyLabel}" ContentStringFormat="Decharging is [mAh]:  {0}" Content="{Binding DechargeMAH}" HorizontalAlignment="Left" Height="34" Margin="72,215,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+                    <Button x:Name="buttonStart" Style="{StaticResource MyButton}" Content="Start Motor" Margin="26,40,155.333,250" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="1"/>
+                    <Button x:Name="buttonStop" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="166,40,15.333,250"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="1"/>
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Graphs">
+            <TabItem Header="Graphs" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid Name="myGrid2">
                     <oxy:PlotView x:Name="Plot1" Title="{Binding Title}" Margin="33,36,117.333,522">
                         <oxy:PlotView.Axes>
@@ -65,7 +67,7 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Cockpit" Margin="-1,0,-3,-2">
+            <TabItem Header="Cockpit" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
@@ -152,7 +154,7 @@
 
 
 
-            <TabItem Header="Waypoints" Margin="3,0,-3,-2" HorizontalAlignment="Left" Width="72">
+            <TabItem Header="Waypoints" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="163*"/>

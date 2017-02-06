@@ -71,11 +71,9 @@ namespace VisualControlV1
             myMap.Mode = new AerialMode(true);
             //addNewPolygon();
 
-
             myCalcValues = new CalcValues();
             myGrid.DataContext = myCalcValues;
-
-
+     
             lblStatus.DataContext = this;
 
             cmbComSelect.ItemsSource = SerialPort.GetPortNames();
@@ -119,11 +117,9 @@ namespace VisualControlV1
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
         }
-
 
         ///// <summary>
         ///// 
@@ -146,8 +142,6 @@ namespace VisualControlV1
         //        MessageBox.Show("Open com port first!.", "Important Message");
         //    }
         //}
-
-
 
         //private void MyTouchMove(object sender, TouchEventArgs e)
         //{
@@ -230,13 +224,6 @@ namespace VisualControlV1
             distance = radius*c;
             return distance; // distance in meters
         }
-
-
-
-
-
-
-
 
         private void button_Click_Start(object sender, RoutedEventArgs e)
         {
