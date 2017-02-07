@@ -260,8 +260,6 @@ namespace VisualControlV1
             try
             {
                 mySerialCom.MySerialPort.Write("#sta2/");
-                //slider3.Value = 17;
-                //slider3.ValueChanged += new RoutedPropertyChangedEventHandler<double>(slider3_ValueChanged);
                 mySerialCom.WriteByte(0x10);
                 mySerialCom.WriteByte(0x10);
             }
@@ -273,7 +271,6 @@ namespace VisualControlV1
 
         private void button_Click_Stop(object sender, RoutedEventArgs e)
         {
-            //if (mySerialCom == null) return;
             try
             {
                 mySerialCom.MySerialPort.Write("#sto2/");
