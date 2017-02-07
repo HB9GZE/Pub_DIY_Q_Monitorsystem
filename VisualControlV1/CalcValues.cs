@@ -32,7 +32,8 @@ namespace VisualControlV1
         private double deltaX, deltaY, oldDeltaX, oldDeltaY;
         private int touchPointCounter;
         private double currentVoltage = 16.0;
-        private double[] currentVoltageArray = new double[20];
+        private double[] rollAngleArray = new double[200];
+        private double[] pitchAngleArray = new double[200];
         int currentArrayCounter = 0;
 
         private int dechargeMAH;
@@ -229,6 +230,39 @@ namespace VisualControlV1
             RollAngle = MathHelper.MakeInt(data.RanMsb, data.RanLsb);
             PitchAngle = MathHelper.MakeInt(data.PanMsb, data.PanLsb);
             PitchAngleScaled = MathHelper.MakeInt(data.PanMsb, data.PanLsb)*(-0.5/45) + 1;
+
+            int i = 0;
+            while (i < 199)
+            {
+                rollAngleArray[i] = rollAngleArray[i + 1];
+                i++;
+            }
+            rollAngleArray[199] = RollAngle;
+            List<DataPoint> myPoints = new List<DataPoint>();
+            i = 0;
+            while (i < 200)
+            {
+                myPoints.Add(new DataPoint(i + 1, rollAngleArray[i]));
+                i++;
+            }
+            Points = myPoints;
+
+            i = 0;
+            while (i < 199)
+            {
+                pitchAngleArray[i] = pitchAngleArray[i + 1];
+                i++;
+            }
+            pitchAngleArray[199] = PitchAngle;
+            myPoints = new List<DataPoint>();
+            i = 0;
+            while (i < 200)
+            {
+                myPoints.Add(new DataPoint(i + 1, pitchAngleArray[i]));
+                i++;
+            }
+            Points2 = myPoints;
+
         }
 
         public void calcNewAngle(double x, double y)
@@ -282,28 +316,13 @@ namespace VisualControlV1
 
         public void calculateCurrentVoltage(ReceivedRawData data)
         {
-            CurrentVoltage = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb) - 2047)*0.0078;
+            CurrentVoltage = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb) - 2047)*0.0234;
             Console.Out.WriteLine("This is the current voltage: " + CurrentVoltage);
 
-            int i = 0;
-            while (i < 19)
-            {
-                currentVoltageArray[i] = currentVoltageArray[i + 1];
-                i++;
-            }
-            currentVoltageArray[19] = CurrentVoltage;
 
-            List<DataPoint> myPoints = new List<DataPoint>();
-
-            i = 0;
-            while (i < 20)
-            {
-                myPoints.Add(new DataPoint(i + 1, currentVoltageArray[i]));
-                i++;
-            }
-
-            Points = myPoints;
         }
+
+  
 
         #region methods for INotifyPropertyChanged
 

@@ -13,7 +13,7 @@
         <local:MathConverter x:Key="MathConv" />
     </Window.Resources>
 
-    <Grid Name="myGrid"  ShowGridLines="True">
+    <Grid Name="myGrid"  ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width ="1*"/>
             <ColumnDefinition Width="140" />
@@ -26,7 +26,7 @@
 
         <TabControl Grid.Column="0" Margin="0,0,0,0" SelectedIndex="0" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Control View" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
-                <Grid Margin="0,0,0,0" ShowGridLines="True">
+                <Grid Margin="0,0,0,0" ShowGridLines="False">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="9*"/>
                         <ColumnDefinition Width="13*"/>
@@ -126,7 +126,7 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Graphs" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
+            <TabItem Header="Monitor" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid Name="myGrid2">
                     <oxy:PlotView x:Name="Plot1" Title="roll angle" Margin="33,36,117,522">
                         <oxy:PlotView.Axes>
@@ -259,7 +259,7 @@
         <StackPanel Grid.Column="2">
             <ComboBox x:Name="cmbComSelect" Style="{StaticResource MyCombobox}" Margin="0,25,0,5"
 					  RenderTransformOrigin="0.47,1.867" />
-            <Button Name="btnOpen"  Style="{StaticResource MyButton}" Content="Open COM Port"  Click="button_Click_North" />
+            <Button Name="btnOpen"  Style="{StaticResource MyButton}" Content="Open COM Port"  Click="BtnPortOpen_Click" />
             <Button Name="btnClose" Style="{StaticResource MyButton}" Content="Close COM Port"  Click="BtnPortClose_Click" />
 
         </StackPanel>
