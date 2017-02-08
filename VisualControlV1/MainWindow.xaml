@@ -247,6 +247,13 @@
                     </wpf:Map>
                     <wpf:Pushpin x:Name="myPushpin" x:FieldModifier="public" wpf:MapLayer.Position="{Binding Path = CurrentLocation}"  Background="#FB0808"  RenderTransformOrigin="-2.543,0.122" Margin="547,385,664,385" />
 
+                    <wpf:Pushpin>
+                        <wpf:MapLayer.Position>
+                            <wpf:Location Latitude="{Binding Path=CurrentLocation}" Longitude="{Binding Path=CurrentLocation}" ></wpf:Location>
+                        </wpf:MapLayer.Position>
+                    </wpf:Pushpin>
+
+
                     <Label x:Name="currLongLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Longitude}" ContentStringFormat="Longitude in ° N : {0:F7} " HorizontalAlignment="Left" Margin="1032,50,0,0" VerticalAlignment="Top" Width="195"/>
                     <Label x:Name="currLatLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Latitude}" ContentStringFormat="Latitude in ° E : {0:F7}" HorizontalAlignment="Left" Margin="1032,90,0,0" VerticalAlignment="Top" Width="195"/>
 
