@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:VisualControlV1"
         xmlns:wpf="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
         mc:Ignorable="d"
-		WindowStartupLocation="CenterScreen" Width="1400" Height="900" Name="myWindow">
+		WindowStartupLocation="CenterScreen" Width="1400" Height="900" Name="myWindow" x:FieldModifier="public">
 
     <Window.Resources>
         <local:MathConverter x:Key="MathConv" />
@@ -131,7 +131,7 @@
                     <oxy:PlotView x:Name="Plot1" Title="roll angle" Margin="33,36,117,522">
                         <oxy:PlotView.Axes>
                             <oxy:LinearAxis Position="Bottom" Minimum="1" Maximum="200" />
-                            <oxy:LinearAxis Position="Left" Minimum="-90" Maximum="90" />
+                            <oxy:LinearAxis Position="Left" Minimum="-45" Maximum="45" />
                         </oxy:PlotView.Axes>
                         <oxy:PlotView.Series>
                             <oxy:LineSeries ItemsSource="{Binding Points}"/>
@@ -141,8 +141,7 @@
                     <oxy:PlotView x:Name="Plot2" Title="pitch angle" Margin="34,395,115.333,163.667">
                         <oxy:PlotView.Axes>
                             <oxy:LinearAxis Position="Bottom" Minimum="1" Maximum="200" />
-                            <oxy:LinearAxis Position="Left" Minimum="-90" Maximum="90
-                                            " />
+                            <oxy:LinearAxis Position="Left" Minimum="-45" Maximum="45" />
                         </oxy:PlotView.Axes>
                         <oxy:PlotView.Series>
                             <oxy:LineSeries ItemsSource="{Binding Points2}"/>
@@ -243,16 +242,9 @@
                     </Grid.ColumnDefinitions>
                     <wpf:Map CredentialsProvider="AuGq1IpRonJ0OYaOBJov8GQpArr3-xYLfJa5Ant1i3IjTvSvQMs1Tp_nrVzwO0pn" x:Name="myMap"  x:FieldModifier="public"
                     MouseDoubleClick="MapWithPushpins_MouseDoubleClick" Center="47.339269,8.443275,0.0000" ZoomLevel="17.0" AnimationLevel="None" Mode="AerialWithLabels" Margin="0,0,237,0" Grid.ColumnSpan="2" >
-                    <!--<wpf:Pushpin Location="47.3387,8.44315"/>-->
+                        <wpf:Pushpin x:Name="myPushpin" wpf:MapLayer.Position="{Binding CurrentLocation}"  Background="#FB0808"/>
+                        <!--<wpf:Pushpin Location="47.3387,8.44315"/>-->
                     </wpf:Map>
-                    <wpf:Pushpin x:Name="myPushpin" x:FieldModifier="public" wpf:MapLayer.Position="{Binding Path = CurrentLocation}"  Background="#FB0808"  RenderTransformOrigin="-2.543,0.122" Margin="547,385,664,385" />
-
-                    <wpf:Pushpin>
-                        <wpf:MapLayer.Position>
-                            <wpf:Location Latitude="{Binding Path=CurrentLocation}" Longitude="{Binding Path=CurrentLocation}" ></wpf:Location>
-                        </wpf:MapLayer.Position>
-                    </wpf:Pushpin>
-
 
                     <Label x:Name="currLongLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Longitude}" ContentStringFormat="Longitude in ° N : {0:F7} " HorizontalAlignment="Left" Margin="1032,50,0,0" VerticalAlignment="Top" Width="195"/>
                     <Label x:Name="currLatLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Latitude}" ContentStringFormat="Latitude in ° E : {0:F7}" HorizontalAlignment="Left" Margin="1032,90,0,0" VerticalAlignment="Top" Width="195"/>

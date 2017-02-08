@@ -76,6 +76,8 @@ namespace VisualControlV1
             myGrid.DataContext = myCalcValues;
 
             lblStatus.DataContext = this;
+            myMap.DataContext = this;
+//            myPushpin.DataContext = this;
 
             cmbComSelect.ItemsSource = SerialPort.GetPortNames();
             cmbComSelect.Text = "COM3";
@@ -172,23 +174,21 @@ namespace VisualControlV1
             myMap.Children.Add(polygon);
         }
 
-        public void AddLocation(Location location)
-        {
-            Dispatcher.Invoke(() =>
-            {
-                try
-                {
-                    // Microsoft.Maps.MapControl.WPF.Location currentLocation = new Microsoft.Maps.MapControl.WPF.Location(location.latitude, location.longitude);
+        //public void AddLocation(Location location)
+        //{
+        //    Dispatcher.Invoke(() =>
+        //    {
+        //        try
+        //        {
+        //            // Microsoft.Maps.MapControl.WPF.Location currentLocation = new Microsoft.Maps.MapControl.WPF.Location(location.latitude, location.longitude);
 
-                    Pushpin currentPushpin = new Pushpin();
-                    currentPushpin.Location = location;
-                    myMap.Children.Add(currentPushpin);
-                }
-                catch (Exception exc)
-                {
-                }
-            });
-        }
+        //            myPushpin.Location = location;
+        //        }
+        //        catch (Exception exc)
+        //        {
+        //        }
+        //    });
+        //}
 
 
 

@@ -34,6 +34,7 @@ namespace VisualControlV1
         private double deltaX, deltaY, oldDeltaX, oldDeltaY;
         private int touchPointCounter;
         private double currentVoltage = 16.0;
+        private double[] currentVoltageArray = new double[10];
         private double[] rollAngleArray = new double[200];
         private double[] pitchAngleArray = new double[200];
         int currentArrayCounter = 0;
@@ -210,11 +211,42 @@ namespace VisualControlV1
             Longitude = (double)(data.LonB4 + data.LonB3 * 256 + data.LonB2 * 256 * 256 + data.LonB1 * 256 * 256 * 256) / 10000000;
             Latitude = (double)(data.LatB4 + data.LatB3 * 256 + data.LatB2 * 65536 + data.LatB1 * 16777216) / 10000000;
             CurrentLocation = new Location(Latitude, Longitude);
-            CurrentLocation = new Location(Longitude, Latitude);
-            Console.Out.WriteLine("Haha this is the ne location: ", CurrentLocation);
-            MainWindow newMainWindow = new MainWindow();
-            newMainWindow.AddLocation(CurrentLocation);
+            //MainWindow.myPushpin.Location = CurrentLocation;
+            //CurrentLocation = new Location(Longitude, Latitude);
+            //Console.Out.WriteLine("Haha this is the new location: ", CurrentLocation.Latitude);
+            Debug.WriteLine("Hahaha the location.latitude is...: " + CurrentLocation.Latitude);
+
+            //MainWindow.Dispatcher.Invoke(() =>
+            //{
+            //    try
+            //    {
+            //        MainWindow myMainWindow = new MainWindow();
+            //        myMainWindow.AddLocation(CurrentLocation);
+                    
+            //    }
+            //    catch (Exception exc)
+            //    {
+            //    }
+            //});
+            
+
         }
+
+        //public void AdddLocation(Location location)
+        //{
+        //    Dispatcher.Invoke(() =>
+        //    {
+        //        try
+        //        {
+        //            // Microsoft.Maps.MapControl.WPF.Location currentLocation = new Microsoft.Maps.MapControl.WPF.Location(location.latitude, location.longitude);
+
+        //            myPushpin.Location = location;
+        //        }
+        //        catch (Exception exc)
+        //        {
+        //        }
+        //    });
+        //}
 
         public void showAnglesInCockpit(ReceivedRawData data)
         {
@@ -308,8 +340,18 @@ namespace VisualControlV1
 
         public void calculateCurrentVoltage(ReceivedRawData data)
         {
-            CurrentVoltage = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb) - 2047)*0.0234;
-            Console.Out.WriteLine("This is the current voltage: " + CurrentVoltage);
+            int i = 0;
+            double sumCurrentVoltageArray = 0;
+            for(i=0; i < currentVoltageArray.Length-1; i++)
+            {
+                currentVoltageArray[i] = currentVoltageArray[i + 1];
+                sumCurrentVoltageArray += currentVoltageArray[i];
+            }
+            currentVoltageArray[9] = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb))*0.00585;
+            CurrentVoltage = (sumCurrentVoltageArray+currentVoltageArray[9]) / 10;
+            
+            //Console.Out.WriteLine("This is the current voltage: " + CurrentVoltage);
+
         }
 
   

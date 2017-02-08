@@ -92,7 +92,7 @@ namespace VisualControlV1
             // TimeoutException can't occure because just triggered on new received data
 
             int howManyBytes = MySerialPort.BytesToRead;
-            Debug.WriteLine("How many bytes to read: " + howManyBytes);
+            //Debug.WriteLine("How many bytes to read: " + howManyBytes);
             if (howManyBytes > DATABYTESBEFOREREAD)
             {
                 MySerialPort.DiscardInBuffer();
