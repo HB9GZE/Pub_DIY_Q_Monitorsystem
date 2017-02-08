@@ -186,6 +186,9 @@
   <ItemGroup>
     <Resource Include="Sources\kompass.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Microsoft\Maps\MapControl\WPF\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

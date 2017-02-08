@@ -43,7 +43,7 @@
                         </Grid.ColumnDefinitions>
                     </Grid>
 
-                    <Viewbox Name="myViewBox01" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="370" Margin="30,25,0,25" Width="370" Grid.ColumnSpan="2" >
+                    <Viewbox Name="myViewBox01" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="370" Margin="30,15,0,15" Width="370" Grid.ColumnSpan="2" Stretch="UniformToFill" >
                         <Grid Name="grid01">
                             <Ellipse Stroke="Black" StrokeThickness="1" Fill="LightGreen" Width="200" Height="200" />
                             <Path Stroke="Black" StrokeThickness="3" Data="M100,3 L100,197 90, 190 M100,197 L110, 190 ">
@@ -57,12 +57,12 @@
                     </Viewbox>
 
                     <Viewbox Grid.Row ="0" Grid.Column="1" VerticalAlignment="Center"
-								 HorizontalAlignment="Right" Height="370" Margin="0,25,30,25" Width="370">
+								 HorizontalAlignment="Right" Height="370" Margin="0,15,30,15" Width="370">
                         <Ellipse Stroke="Black" StrokeThickness="1" Fill="LightBlue" Width="200" Height="200" />
                     </Viewbox>
 
                     <Viewbox Name="myViewBox03" Grid.Row ="0" Grid.Column="1" VerticalAlignment="Center"
-								 HorizontalAlignment="Right" Height="370" Margin="0,25,30,25" Width="370">
+								 HorizontalAlignment="Right" Height="370" Margin="0,15,30,15" Width="370">
                         <Path Stroke="Black" StrokeThickness="1" Fill="LightGreen">
                             <Path.Data>
                                 <CombinedGeometry GeometryCombineMode="Exclude">
@@ -241,11 +241,11 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <wpf:Map CredentialsProvider="AuGq1IpRonJ0OYaOBJov8GQpArr3-xYLfJa5Ant1i3IjTvSvQMs1Tp_nrVzwO0pn" x:Name="myMap"
+                    <wpf:Map CredentialsProvider="AuGq1IpRonJ0OYaOBJov8GQpArr3-xYLfJa5Ant1i3IjTvSvQMs1Tp_nrVzwO0pn" x:Name="myMap"  x:FieldModifier="public"
                     MouseDoubleClick="MapWithPushpins_MouseDoubleClick" Center="47.339269,8.443275,0.0000" ZoomLevel="17.0" AnimationLevel="None" Mode="AerialWithLabels" Margin="0,0,237,0" Grid.ColumnSpan="2" >
-                    <wpf:Pushpin Location="47.3387,8.44315"/>
+                    <!--<wpf:Pushpin Location="47.3387,8.44315"/>-->
                     </wpf:Map>
-                    <wpf:Pushpin  Location="{Binding Path = CurrentLocation}"  Background="#FB0808"/>
+                    <wpf:Pushpin x:Name="myPushpin" x:FieldModifier="public" wpf:MapLayer.Position="{Binding Path = CurrentLocation}"  Background="#FB0808"  RenderTransformOrigin="-2.543,0.122" Margin="547,385,664,385" />
 
                     <Label x:Name="currLongLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Longitude}" ContentStringFormat="Longitude in ° N : {0:F7} " HorizontalAlignment="Left" Margin="1032,50,0,0" VerticalAlignment="Top" Width="195"/>
                     <Label x:Name="currLatLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Latitude}" ContentStringFormat="Latitude in ° E : {0:F7}" HorizontalAlignment="Left" Margin="1032,90,0,0" VerticalAlignment="Top" Width="195"/>

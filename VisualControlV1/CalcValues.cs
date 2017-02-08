@@ -12,6 +12,8 @@ using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Maps.MapControl.WPF;
 using OxyPlot;
+using System.Windows.Threading;
+
 
 namespace VisualControlV1
 {
@@ -63,6 +65,26 @@ namespace VisualControlV1
             }
         }
 
+        public double Longitude
+        {
+            get { return longitude; }
+            set
+            {
+                longitude = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("Longitude"));
+            }
+        }
+
+        public double Latitude
+        {
+            get { return latitude; }
+            set
+            {
+                latitude = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("Latitude"));
+            }
+        }
+
         public double SetHeading
         {
             get { return longitude; }
@@ -90,27 +112,6 @@ namespace VisualControlV1
                 NotifyChangedValue(new PropertyChangedEventArgs("AltGPS"));
             }
         }
-
-        public double Longitude
-        {
-            get { return longitude; }
-            set
-            {
-                longitude = value;
-                NotifyChangedValue(new PropertyChangedEventArgs("Longitude"));
-            }
-        }
-
-        public double Latitude
-        {
-            get { return latitude; }
-            set
-            {
-                latitude = value;
-                NotifyChangedValue(new PropertyChangedEventArgs("Latitude"));
-            }
-        }
-
 
         public double YawAngle
         {
@@ -172,8 +173,6 @@ namespace VisualControlV1
             }
         }
 
-
-
         public double CurrentVoltage
         {
             get { return currentVoltage; }
@@ -208,24 +207,14 @@ namespace VisualControlV1
 
         public void showLonLatInWaypoints(ReceivedRawData data)
         {
-            Longitude = (double)(data.LonB4 + data.LonB3*256 + data.LonB2*256*256 + data.LonB1*256*256*256)/10000000;
-            Latitude = (double)(data.LatB4 + data.LatB3 * 256 + data.LatB2 * 65536 + data.LatB1 * 16777216)/10000000;
-            CurrentLocation = new Location(Latitude,Longitude);
-            
-
-
-            //Console.Out.WriteLine("This is the Longitude: " + data.LonB4);
-
-            //Location pinLocation = myMap.ViewportPointToLocation(CurrentLocation);
-
-            //// The pushpin to add to the map.
-            //Pushpin pin = new Pushpin();
-            //pin.Location = pinLocation;
-
-            //// Adds the pushpin to the map.
-            //myMap.Children.Add(pin);
+            Longitude = (double)(data.LonB4 + data.LonB3 * 256 + data.LonB2 * 256 * 256 + data.LonB1 * 256 * 256 * 256) / 10000000;
+            Latitude = (double)(data.LatB4 + data.LatB3 * 256 + data.LatB2 * 65536 + data.LatB1 * 16777216) / 10000000;
+            CurrentLocation = new Location(Latitude, Longitude);
+            CurrentLocation = new Location(Longitude, Latitude);
+            Console.Out.WriteLine("Haha this is the ne location: ", CurrentLocation);
+            MainWindow newMainWindow = new MainWindow();
+            newMainWindow.AddLocation(CurrentLocation);
         }
-
 
         public void showAnglesInCockpit(ReceivedRawData data)
         {

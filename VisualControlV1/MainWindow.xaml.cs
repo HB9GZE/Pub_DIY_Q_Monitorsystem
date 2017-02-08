@@ -70,10 +70,11 @@ namespace VisualControlV1
             //Set map to Aerial mode with labels
             myMap.Mode = new AerialMode(true);
             //addNewPolygon();
+          
 
             myCalcValues = new CalcValues();
             myGrid.DataContext = myCalcValues;
-     
+
             lblStatus.DataContext = this;
 
             cmbComSelect.ItemsSource = SerialPort.GetPortNames();
@@ -151,44 +152,9 @@ namespace VisualControlV1
         {
         }
 
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="sender"></param>
-        ///// <param name="e"></param>
-        //private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        //{
-        //    if (initializing) return;
-        //    byte myDummyByte;
-        //    myDummyByte = Convert.ToByte(slider1.Value);
-        //    try
-        //    {
-        //        mySerialCom.MySerialPort.Write("#yaw2/");
-        //        mySerialCom.WriteByte(myDummyByte);
-        //        mySerialCom.WriteByte(myDummyByte);
-        //    }
-        //    catch (Exception)
-        //    {
-        //        MessageBox.Show("Open com port first!.", "Important Message");
-        //    }
-        //}
 
-        //private void MyTouchMove(object sender, TouchEventArgs e)
-        //{
-        //    Point myTouchPoint = e.GetTouchPoint(this).Position;
-        //    myCalcValues.calcNewAngle(myTouchPoint.X, myTouchPoint.Y);
 
-        //    //GeneralTransform generalTransform = image1.TransformToVisual(this);
-        //    //Point point = generalTransform.Transform(new Point());
-        //    //Debug.WriteLine(point.X + " " + point.Y);
-        //}
-
-        //private void MyTouchDownAndUp(object sender, TouchEventArgs e)
-        //{
-        //    myCalcValues.resetNewAngle();
-        //}
-
-        void addNewPolygon()
+        private void addNewPolygon()
         {
             MapPolygon polygon = new MapPolygon();
             polygon.Fill = new System.Windows.Media.SolidColorBrush(System.Windows.Media.Colors.Blue);
@@ -205,6 +171,26 @@ namespace VisualControlV1
 
             myMap.Children.Add(polygon);
         }
+
+        public void AddLocation(Location location)
+        {
+            Dispatcher.Invoke(() =>
+            {
+                try
+                {
+                    // Microsoft.Maps.MapControl.WPF.Location currentLocation = new Microsoft.Maps.MapControl.WPF.Location(location.latitude, location.longitude);
+
+                    Pushpin currentPushpin = new Pushpin();
+                    currentPushpin.Location = location;
+                    myMap.Children.Add(currentPushpin);
+                }
+                catch (Exception exc)
+                {
+                }
+            });
+        }
+
+
 
         private void MapWithPushpins_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
