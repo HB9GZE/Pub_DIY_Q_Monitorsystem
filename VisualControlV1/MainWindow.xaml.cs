@@ -84,62 +84,7 @@ namespace VisualControlV1
         }
 
 
-        private void BtnPortOpen_Click(object sender, RoutedEventArgs e)
-        {
-            if (mySerialCom == null)
-            {
-                mySerialCom = new SerialCom(cmbComSelect.Text);
-            }
-            else
-            {
-                MessageBox.Show("Serial port is already open!");
-            }
 
-            if (mySerialCom != null)
-            {
-                Status = mySerialCom.Status;
-                mySerialCom.Subscribe(myCalcValues);
-            }
-        }
-
-        private void BtnPortClose_Click(object sender, RoutedEventArgs e)
-        {
-            if (mySerialCom != null)
-            {
-                mySerialCom.ClosePort();
-                mySerialCom = null;
-                Status = cmbComSelect.Text + " has been closed.";
-            }
-        }
-
-        private void button_Click_North(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Click_South(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Click_West(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Click_East(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void button_Click_Hold(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void button_Click_Landing(object sender, RoutedEventArgs e)
-        {
-
-        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -241,6 +186,123 @@ namespace VisualControlV1
             return distance; // distance in meters
         }
 
+        private void BtnPortOpen_Click(object sender, RoutedEventArgs e)
+        {
+            if (mySerialCom == null)
+            {
+                mySerialCom = new SerialCom(cmbComSelect.Text);
+            }
+            else
+            {
+                MessageBox.Show("Serial port is already open!");
+            }
+
+            if (mySerialCom != null)
+            {
+                Status = mySerialCom.Status;
+                mySerialCom.Subscribe(myCalcValues);
+            }
+        }
+
+        private void BtnPortClose_Click(object sender, RoutedEventArgs e)
+        {
+            if (mySerialCom != null)
+            {
+                mySerialCom.ClosePort();
+                mySerialCom = null;
+                Status = cmbComSelect.Text + " has been closed.";
+            }
+        }
+
+        private void button_Click_North(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#mno2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+
+        }
+
+        private void button_Click_South(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#mso2/");
+                mySerialCom.WriteByte(0x0);
+                mySerialCom.WriteByte(0x0);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+
+        }
+
+        private void button_Click_West(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#mwe2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+
+        }
+
+        private void button_Click_East(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#mea2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+
+        }
+
+        private void button_Click_Hold(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#hld2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+
+        }
+        private void button_Click_Landing(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#lnd2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+
+        }
+
         private void button_Click_Start(object sender, RoutedEventArgs e)
         {
             try
@@ -260,6 +322,62 @@ namespace VisualControlV1
             try
             {
                 mySerialCom.MySerialPort.Write("#sto2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
+
+        private void button_Click_CalEuler(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#cal2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
+
+        private void button_Click_NoCalEuler(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#caz2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
+
+        private void button_Click_RelPressureZero(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#spz2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
+
+        private void button_Click_Reset(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#rst2/");
                 mySerialCom.WriteByte(0x00);
                 mySerialCom.WriteByte(0x00);
             }

@@ -342,15 +342,17 @@ namespace VisualControlV1
         {
             int i = 0;
             double sumCurrentVoltageArray = 0;
-            for(i=0; i < currentVoltageArray.Length-1; i++)
+
+            if(((MathHelper.MakeInt(data.CcuMsb, data.CcuLsb)) * 0.00585) > 0)
             {
-                currentVoltageArray[i] = currentVoltageArray[i + 1];
-                sumCurrentVoltageArray += currentVoltageArray[i];
+                for (i=0; i < currentVoltageArray.Length-1; i++)
+                {
+                    currentVoltageArray[i] = currentVoltageArray[i + 1];
+                    sumCurrentVoltageArray += currentVoltageArray[i];
+                }
+                currentVoltageArray[9] = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb))*0.00585;
+                CurrentVoltage = (sumCurrentVoltageArray+currentVoltageArray[9]) / 10;
             }
-            currentVoltageArray[9] = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb))*0.00585;
-            CurrentVoltage = (sumCurrentVoltageArray+currentVoltageArray[9]) / 10;
-            
-            //Console.Out.WriteLine("This is the current voltage: " + CurrentVoltage);
 
         }
 

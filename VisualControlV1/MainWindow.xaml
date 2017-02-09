@@ -28,22 +28,23 @@
             <TabItem Header="Control View" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid Margin="0,0,0,0" ShowGridLines="False">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="9*"/>
-                        <ColumnDefinition Width="13*"/>
-                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="147*"/>
+                        <ColumnDefinition Width="240*"/>
+                        <ColumnDefinition Width="559*"/>
+                        <ColumnDefinition Width="301*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="140*" />
                         <RowDefinition Height="131*" />
                     </Grid.RowDefinitions>
-                    <Grid Grid.Row="0" ShowGridLines="True" Margin="0,0,0,5" Grid.ColumnSpan="2">
+                    <Grid Grid.Row="0" ShowGridLines="True" Margin="0,0,0,5" Grid.ColumnSpan="3">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                     </Grid>
 
-                    <Viewbox Name="myViewBox01" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="370" Margin="30,15,0,15" Width="370" Grid.ColumnSpan="2" Stretch="UniformToFill" >
+                    <Viewbox Name="myViewBox01" Grid.Row ="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Height="370" Margin="30,24,0,25" Width="370" Grid.ColumnSpan="3" Stretch="UniformToFill" >
                         <Grid Name="grid01">
                             <Ellipse Stroke="Black" StrokeThickness="1" Fill="LightGreen" Width="200" Height="200" />
                             <Path Stroke="Black" StrokeThickness="3" Data="M100,3 L100,197 90, 190 M100,197 L110, 190 ">
@@ -56,13 +57,13 @@
                         </Grid>
                     </Viewbox>
 
-                    <Viewbox Grid.Row ="0" Grid.Column="1" VerticalAlignment="Center"
-								 HorizontalAlignment="Right" Height="370" Margin="0,15,30,15" Width="370">
+                    <Viewbox Grid.Row ="0" Grid.Column="2" VerticalAlignment="Center"
+								 HorizontalAlignment="Right" Height="370" Margin="0,24,30,25" Width="370">
                         <Ellipse Stroke="Black" StrokeThickness="1" Fill="LightBlue" Width="200" Height="200" />
                     </Viewbox>
 
-                    <Viewbox Name="myViewBox03" Grid.Row ="0" Grid.Column="1" VerticalAlignment="Center"
-								 HorizontalAlignment="Right" Height="370" Margin="0,15,30,15" Width="370">
+                    <Viewbox Name="myViewBox03" Grid.Row ="0" Grid.Column="2" VerticalAlignment="Center"
+								 HorizontalAlignment="Right" Height="370" Margin="0,24,30,25" Width="370">
                         <Path Stroke="Black" StrokeThickness="1" Fill="LightGreen">
                             <Path.Data>
                                 <CombinedGeometry GeometryCombineMode="Exclude">
@@ -92,24 +93,24 @@
                     </Viewbox>
 
 
-                    <Label x:Name="labelVoltage" Style="{StaticResource MyLabelVoltage}" Background="LightCoral" ContentStringFormat="Voltage is:  {0:F1}  Volt"  Content="{Binding CurrentVoltage }" HorizontalAlignment="Center" Height="50" Margin="26,100,10.333,0" VerticalAlignment="Top" Width="265" Grid.Row ="0" Grid.Column="2"/>
+                    <Label x:Name="labelVoltage" Style="{StaticResource MyLabelVoltage}" Background="LightCoral" ContentStringFormat="Voltage is:  {0:F1}  Volt"  Content="{Binding CurrentVoltage }" HorizontalAlignment="Center" Height="50" Margin="26,100,10,0" VerticalAlignment="Top" Width="265" Grid.Row ="0" Grid.Column="3"/>
 
-                    <Label x:Name="labelYaw" Style="{StaticResource MyLabel}" Background="LightGreen" ContentStringFormat="Yaw:  {0} Deg" Content="{Binding YawAngle}" HorizontalAlignment="Left" Height="34" Margin="137,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
-                    <Label x:Name="labelRoll" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Roll:  {0} Deg" Content="{Binding RollAngle}" HorizontalAlignment="Left" Height="34" Margin="365.333,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="1"/>
-                    <Label x:Name="labelPitch" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Pitch:  {0} Deg" Content="{Binding PitchAngle}" HorizontalAlignment="Left" Height="34" Margin="150.333,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="1"/>
-                    <Label x:Name="labelSetHeading" Style="{StaticResource MyLabel}" Background="LightGreen" ContentStringFormat="Set heading to:  {0} Deg" Content="{Binding SetHeading}" HorizontalAlignment="Left" Height="34" Margin="142,115,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
-                    <Label x:Name="labelAltPressure" Style="{StaticResource MyLabel}" Background="LightYellow" ContentStringFormat="Alt Pressure:  {0:F1} m" Content="{Binding AltPressure}" HorizontalAlignment="Left" Height="34" Margin="147,240,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
-                    <Label x:Name="labelAltGPS" Style="{StaticResource MyLabel}" Background="LightYellow" ContentStringFormat="Alt GPS:  {0:F1} m" Content="{Binding AltGPS}" HorizontalAlignment="Left" Height="34" Margin="147,285,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1"/>
+                    <Label x:Name="labelYaw" Style="{StaticResource MyLabel}" Background="LightGreen" ContentStringFormat="Yaw:  {0} Deg" Content="{Binding YawAngle}" HorizontalAlignment="Left" Height="34" Margin="137,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <Label x:Name="labelRoll" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Roll:  {0} Deg" Content="{Binding RollAngle}" HorizontalAlignment="Left" Height="34" Margin="365,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="2"/>
+                    <Label x:Name="labelPitch" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Pitch:  {0} Deg" Content="{Binding PitchAngle}" HorizontalAlignment="Left" Height="34" Margin="150,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="2"/>
+                    <Label x:Name="labelSetHeading" Style="{StaticResource MyLabel}" Background="LightGreen" ContentStringFormat="Set heading to:  {0} Deg" Content="{Binding SetHeading}" HorizontalAlignment="Left" Height="34" Margin="142,115,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.ColumnSpan="2"/>
+                    <Label x:Name="labelAltPressure" Style="{StaticResource MyLabel}" Background="LightYellow" ContentStringFormat="Alt Pressure:  {0:F1} m" Content="{Binding AltPressure}" HorizontalAlignment="Left" Height="34" Margin="0,240,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="1"/>
+                    <Label x:Name="labelAltGPS" Style="{StaticResource MyLabel}" Background="LightYellow" ContentStringFormat="Alt GPS:  {0:F1} m" Content="{Binding AltGPS}" HorizontalAlignment="Left" Height="34" Margin="0,285,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="1"/>
 
-                    <Button x:Name="buttonNorth" Style="{StaticResource MyButton}" Content="N" Margin="10.333,80,499,262.667" Click="button_Click_North" Background="LightGreen" Grid.Row ="1" Grid.Column="1" Width="50"/>
-                    <Button x:Name="buttonSouth" Style="{StaticResource MyButton}" Content="S" Margin="10.333,155,499,187.667" Click="button_Click_South" Background="LightGreen" Grid.Row ="1" Grid.Column="1" Width="50"/>
-                    <Button x:Name="buttonWest" Style="{StaticResource MyButton}" Content="W" Margin="337,115,559,227.667" Click="button_Click_West" Background="LightGreen" Grid.Row ="1" Grid.Column="0" Width="50" Grid.ColumnSpan="2"/>
-                    <Button x:Name="buttonEast" Style="{StaticResource MyButton}" Content="E" Margin="75.333,115,434,227.667" Click="button_Click_East" Background="LightGreen" Grid.Row ="1" Grid.Column="1" Width="50"/>
+                    <Button x:Name="buttonNorth" Style="{StaticResource MyButton}" Content="N" Margin="10,80,499,262" Click="button_Click_North" Background="LightGreen" Grid.Row ="1" Grid.Column="2" Width="50"/>
+                    <Button x:Name="buttonSouth" Style="{StaticResource MyButton}" Content="S" Margin="10,155,499,187" Click="button_Click_South" Background="LightGreen" Grid.Row ="1" Grid.Column="2" Width="50"/>
+                    <Button x:Name="buttonWest" Style="{StaticResource MyButton}" Content="W" Margin="190,115,0,227" Click="button_Click_West" Background="LightGreen" Grid.Row ="1" Grid.Column="1" Width="50"/>
+                    <Button x:Name="buttonEast" Style="{StaticResource MyButton}" Content="E" Margin="75,115,434,227" Click="button_Click_East" Background="LightGreen" Grid.Row ="1" Grid.Column="2" Width="50"/>
 
-                    <Button x:Name="buttonStart" Style="{StaticResource MyButton}" Content="Start Motor" Margin="26,40,155.333,330" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="2"/>
-                    <Button x:Name="buttonStop" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="166,40,15.333,330"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="2"/>
+                    <Button x:Name="buttonStart" Style="{StaticResource MyButton}" Content="Start Motor" Margin="26,40,155,329" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="3"/>
+                    <Button x:Name="buttonStop" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="166,40,15,329"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="3"/>
 
-                    <Button x:Name="buttonHold" Style="{StaticResource MyButton}" Content="Hold altitude" Margin="362,245,464,97.667" Click="button_Click_Hold" Background="LightYellow" Grid.Row ="1" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Button x:Name="buttonHold" Style="{StaticResource MyButton}" Content="Hold altitude" Margin="215,245,464,97" Click="button_Click_Hold" Background="LightYellow" Grid.Row ="1" Grid.Column="1" Grid.ColumnSpan="2">
                         <!--<Button.Triggers>
                             <EventTrigger RoutedEvent="MouseEnter">
                                 <BeginStoryboard>
@@ -122,10 +123,36 @@
                     </Button>
 
 
-                    <Button x:Name="buttonLanding" Style="{StaticResource MyButton}" Content="Auto landing" Margin="125.333,245,314,97.667" Click="button_Click_Landing" Background="LightYellow" Grid.Row ="1" Grid.Column="1" />
+                    <Button x:Name="buttonLanding" Style="{StaticResource MyButton}" Content="Auto landing" Margin="125,245,314,97" Click="button_Click_Landing" Background="LightYellow" Grid.Row ="1" Grid.Column="2" />
 
                 </Grid>
             </TabItem>
+
+            <TabItem Header="Waypoints" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <wpf:Map CredentialsProvider="AuGq1IpRonJ0OYaOBJov8GQpArr3-xYLfJa5Ant1i3IjTvSvQMs1Tp_nrVzwO0pn" x:Name="myMap"  x:FieldModifier="public"
+                    MouseDoubleClick="MapWithPushpins_MouseDoubleClick" Center="47.339269,8.443275,0.0000" ZoomLevel="17.0" AnimationLevel="None" Mode="AerialWithLabels" Margin="18,10,219,-10" >
+                        <wpf:Pushpin x:Name="myPushpin" Background="#FB0808" Content="Hi" Height="Auto" Margin="487,375,487,385">
+                            <wpf:Pushpin.DataContext>
+                                <local:CalcValues>
+                                    <local:CalcValues.CurrentLocation>
+                                        <wpf:Location AltitudeReference="Ground" Altitude="0" Longitude="8.442956" Latitude="47.33888"/>
+                                    </local:CalcValues.CurrentLocation>
+                                </local:CalcValues>
+                            </wpf:Pushpin.DataContext>
+                        </wpf:Pushpin>
+                        <!--<wpf:Pushpin Location="47.3387,8.44315"/>-->
+                    </wpf:Map>
+
+                    <Label x:Name="currLongLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Longitude}" ContentStringFormat="Longitude in ° N : {0:F7} " HorizontalAlignment="Left" Margin="1032,50,0,0" VerticalAlignment="Top" Width="195"/>
+                    <Label x:Name="currLatLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Latitude}" ContentStringFormat="Latitude in ° E : {0:F7}" HorizontalAlignment="Left" Margin="1032,90,0,0" VerticalAlignment="Top" Width="195"/>
+
+                </Grid>
+            </TabItem>
+
             <TabItem Header="Monitor" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid Name="myGrid2">
                     <oxy:PlotView x:Name="Plot1" Title="roll angle" Margin="33,36,117,522">
@@ -150,106 +177,20 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Cockpit" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
+            <TabItem Header="Settings" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="50" />
                     </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="37*" />
-                            <ColumnDefinition Width="49*"/>
-                            <ColumnDefinition Width="533*"/>
-                            <ColumnDefinition Width="620*" />
-                        </Grid.ColumnDefinitions>
-                        <Viewbox Name="myViewBox2" Grid.Column="0" VerticalAlignment="Center"
-								 HorizontalAlignment="Center"  Grid.ColumnSpan="3">
-                            <Grid Name="grid2">
-                                <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
-                                <Path Stroke="Black" StrokeThickness="3"
-									  Data="M100,3 L100,197 90, 190 M100,197 L110, 190 ">
-                                    <Path.RenderTransform>
-                                        <RotateTransform x:Name="transF2" CenterX="100" CenterY="100"
-														 Angle="{Binding YawAngle,Converter={StaticResource MathConv},
-																ConverterParameter=@VALUE-180}" />
-                                    </Path.RenderTransform>
-                                </Path>
-                            </Grid>
-                        </Viewbox>
-                        <Viewbox Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center"
-								 Margin="10.001,81,9.999,81">
-                            <Ellipse Stroke="Black" StrokeThickness="1" Fill="Orange" Width="200" Height="200" />
 
-                        </Viewbox>
-                        <Viewbox Name="myViewBox1" Grid.Column="3" VerticalAlignment="Center"
-								 HorizontalAlignment="Center" Margin="10.001,81,9.999,81">
-                            <Path Stroke="Black" StrokeThickness="1" Fill="Blue">
-                                <Path.Data>
-                                    <CombinedGeometry GeometryCombineMode="Exclude">
-                                        <CombinedGeometry.Geometry1>
-                                            <EllipseGeometry Center="100,100" RadiusX="100" RadiusY="100" />
-                                        </CombinedGeometry.Geometry1>
-                                        <CombinedGeometry.Geometry2>
-                                            <RectangleGeometry>
-                                                <RectangleGeometry.Rect>
-                                                    <Rect X="0" Y="0" Width="200" Height="100" />
-                                                </RectangleGeometry.Rect>
-                                                <RectangleGeometry.Transform>
-                                                    <TransformGroup>
-                                                        <!--<ScaleTransform ScaleX="1" ScaleY="1" />-->
-                                                        <ScaleTransform ScaleY="{Binding Path = PitchAngleScaled}" />
-                                                    </TransformGroup>
-                                                </RectangleGeometry.Transform>
-                                            </RectangleGeometry>
-                                        </CombinedGeometry.Geometry2>
-                                    </CombinedGeometry>
-                                </Path.Data>
-                                <Path.RenderTransform>
-                                    <RotateTransform CenterX="100" CenterY="100"
-													 Angle="{Binding Path = RollAngle}" />
-                                </Path.RenderTransform>
-                            </Path>
-                        </Viewbox>
-                    </Grid>
+                    <Button x:Name="buttonCalEuler" Style="{StaticResource MyButton}" Content="Cal Euler" Margin="72,40,1054,671" Click="button_Click_CalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="0" RenderTransformOrigin="-1.208,0.52"/>
 
-                    <Grid Grid.Column="0" Grid.Row="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="2*" />
-                            <ColumnDefinition Width="1*" />
-                            <ColumnDefinition Width="1*" />
-                        </Grid.ColumnDefinitions>
-                        <Viewbox Grid.Column="0" HorizontalAlignment="Center" Margin="10">
-                            <Label x:Name="lblHeading" 
-								   Content="{Binding Path = YawAngle}" ContentStringFormat="Yaw/Heading(deg)  : {0:0}" />
-                        </Viewbox>
-                        <Viewbox Grid.Column="1" HorizontalAlignment="Right" Margin="10">
-                            <Label Name="lblRollAngle" Grid.Column="1" 
-								   Content="{Binding Path = RollAngle}" ContentStringFormat="Roll(deg)  : {0:0}" />
-                        </Viewbox>
-                        <Viewbox Grid.Column="2" HorizontalAlignment="Left" Margin="10">
-                            <Label Name="lblPitchAngle" Grid.Column="2" 
-								   Content="{Binding Path = PitchAngle}" ContentStringFormat="Pitch(deg)  : {0:0}" />
-                        </Viewbox>
-                    </Grid>
+                    <Button x:Name="buttonNoCalEuler" Style="{StaticResource MyButton}" Content="No Cal Euler" Margin="72,165,1054,546" Click="button_Click_NoCalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="0"/>
+                    <Button x:Name="buttonSetRelPressureZero" Style="{StaticResource MyButton}" Content="set rel pressure zero" Margin="72,405,1054,306" Click="button_Click_RelPressureZero" Background="LightBlue" Grid.Row ="0" Grid.Column="0"/>
+                    <Button x:Name="buttonReset" Style="{StaticResource MyButton}" Content="RESET" Margin="1082,40,44,671" Click="button_Click_Reset" Background="Red" Grid.Row ="0" Grid.Column="0"/>
                 </Grid>
-            </TabItem>
 
-            <TabItem Header="Waypoints" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-                    <wpf:Map CredentialsProvider="AuGq1IpRonJ0OYaOBJov8GQpArr3-xYLfJa5Ant1i3IjTvSvQMs1Tp_nrVzwO0pn" x:Name="myMap"  x:FieldModifier="public"
-                    MouseDoubleClick="MapWithPushpins_MouseDoubleClick" Center="47.339269,8.443275,0.0000" ZoomLevel="17.0" AnimationLevel="None" Mode="AerialWithLabels" Margin="0,0,237,0" Grid.ColumnSpan="2" >
-                        <wpf:Pushpin x:Name="myPushpin" wpf:MapLayer.Position="{Binding CurrentLocation}"  Background="#FB0808"/>
-                        <!--<wpf:Pushpin Location="47.3387,8.44315"/>-->
-                    </wpf:Map>
-
-                    <Label x:Name="currLongLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Longitude}" ContentStringFormat="Longitude in ° N : {0:F7} " HorizontalAlignment="Left" Margin="1032,50,0,0" VerticalAlignment="Top" Width="195"/>
-                    <Label x:Name="currLatLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Latitude}" ContentStringFormat="Latitude in ° E : {0:F7}" HorizontalAlignment="Left" Margin="1032,90,0,0" VerticalAlignment="Top" Width="195"/>
-
-                </Grid>
             </TabItem>
 
         </TabControl>
