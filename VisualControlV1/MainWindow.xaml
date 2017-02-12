@@ -149,7 +149,7 @@
 
                     <Label x:Name="currLongLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Longitude}" ContentStringFormat="Longitude in ° N : {0:F7} " HorizontalAlignment="Left" Margin="1032,50,0,0" VerticalAlignment="Top" Width="195"/>
                     <Label x:Name="currLatLabel" Style="{StaticResource MyLabel}" Background="LightGreen" Content="{Binding Path = Latitude}" ContentStringFormat="Latitude in ° E : {0:F7}" HorizontalAlignment="Left" Margin="1032,90,0,0" VerticalAlignment="Top" Width="195"/>
-                    <Button x:Name="currentPosition" Style="{StaticResource MyButton}" Content="show current Position"  Click="currentPosition_Click" Margin="1077,150,49,611" />
+                    <Button x:Name="currentPosition" Style="{StaticResource MyButton}" Background="LightGreen" Content="show current Position"  Click="currentPosition_Click" Margin="1077,150,49,611" />
                 </Grid>
             </TabItem>
 
