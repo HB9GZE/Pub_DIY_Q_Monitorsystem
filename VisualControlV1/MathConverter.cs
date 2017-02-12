@@ -15,7 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Parses a mathematical string and executes the calculation

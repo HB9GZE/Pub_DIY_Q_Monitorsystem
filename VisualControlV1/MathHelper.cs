@@ -6,7 +6,7 @@
 
 using System;
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Provides some mathematical equations to calculate the angles

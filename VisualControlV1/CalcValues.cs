@@ -13,9 +13,10 @@ using System.Windows.Controls;
 using Microsoft.Maps.MapControl.WPF;
 using OxyPlot;
 using System.Windows.Threading;
+using System.Collections.ObjectModel;
+using System.Windows.Automation.Peers;
 
-
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Calculates all the angles from the raw sensor data. This is done by applying a 
@@ -55,6 +56,18 @@ namespace VisualControlV1
         private double altGPS;
 
         private Location currentLocation;
+        private bool isClicked;
+
+
+        public bool IsClicked
+        {
+            get { return isClicked; }
+            set
+            {
+                isClicked = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("IsClicked"));
+            }
+        }
 
         public Location CurrentLocation
         {
@@ -75,6 +88,8 @@ namespace VisualControlV1
                 NotifyChangedValue(new PropertyChangedEventArgs("Longitude"));
             }
         }
+
+
 
         public double Latitude
         {
@@ -206,47 +221,31 @@ namespace VisualControlV1
             }
         }
 
+        public void calcValues()
+        {
+            this.CurrentLocation = new Location();
+            this.CurrentLocation.Latitude = 47.338862;
+            this.CurrentLocation.Longitude = 8.443015;
+        }
+
         public void showLonLatInWaypoints(ReceivedRawData data)
         {
             Longitude = (double)(data.LonB4 + data.LonB3 * 256 + data.LonB2 * 256 * 256 + data.LonB1 * 256 * 256 * 256) / 10000000;
             Latitude = (double)(data.LatB4 + data.LatB3 * 256 + data.LatB2 * 65536 + data.LatB1 * 16777216) / 10000000;
             CurrentLocation = new Location(Latitude, Longitude);
-            //MainWindow.myPushpin.Location = CurrentLocation;
-            //CurrentLocation = new Location(Longitude, Latitude);
-            //Console.Out.WriteLine("Haha this is the new location: ", CurrentLocation.Latitude);
-            Debug.WriteLine("Hahaha the location.latitude is...: " + CurrentLocation.Latitude);
-
-            //MainWindow.Dispatcher.Invoke(() =>
-            //{
-            //    try
-            //    {
-            //        MainWindow myMainWindow = new MainWindow();
-            //        myMainWindow.AddLocation(CurrentLocation);
-                    
-            //    }
-            //    catch (Exception exc)
-            //    {
-            //    }
-            //});
-            
+            IsClicked = true;
+            MakeSomethingHappen();
 
         }
 
-        //public void AdddLocation(Location location)
-        //{
-        //    Dispatcher.Invoke(() =>
-        //    {
-        //        try
-        //        {
-        //            // Microsoft.Maps.MapControl.WPF.Location currentLocation = new Microsoft.Maps.MapControl.WPF.Location(location.latitude, location.longitude);
 
-        //            myPushpin.Location = location;
-        //        }
-        //        catch (Exception exc)
-        //        {
-        //        }
-        //    });
-        //}
+        public static EventHandler SomethingHappened;
+
+        public void MakeSomethingHappen()
+        {
+                SomethingHappened(this, null);
+        }
+
 
         public void showAnglesInCockpit(ReceivedRawData data)
         {
@@ -286,7 +285,6 @@ namespace VisualControlV1
                 i++;
             }
             Points2 = myPoints;
-
         }
 
         public void calcNewAngle(double x, double y)
@@ -355,8 +353,6 @@ namespace VisualControlV1
             }
 
         }
-
-  
 
         #region methods for INotifyPropertyChanged
 

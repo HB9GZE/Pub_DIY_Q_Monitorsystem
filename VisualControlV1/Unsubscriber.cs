@@ -7,7 +7,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Holds the Observer and Observabels 

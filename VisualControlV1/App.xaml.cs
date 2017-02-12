@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Interaction logic for App.xaml

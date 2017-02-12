@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Windows.Data;
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Extracts from the received raw data the values

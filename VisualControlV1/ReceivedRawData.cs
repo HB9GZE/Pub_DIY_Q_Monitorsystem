@@ -4,7 +4,7 @@
 // </copyright>
 //-----------------------------------------------------------------------
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Holds a data set of raw sensor data

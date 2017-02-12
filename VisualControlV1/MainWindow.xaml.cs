@@ -23,13 +23,13 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Maps.MapControl.WPF;
-using VisualControlV1.Annotations;
+using VisualControlV3.Annotations;
 using OxyPlot;
 using OxyPlot.Series;
 
 
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -40,7 +40,8 @@ namespace VisualControlV1
         private SerialCom mySerialCom;
         private string status;
         private bool initializing = false;
-
+        public static RoutedCommand ButtonClickCommand = new RoutedCommand();
+        public Button dummyButton { get; set; }
 
         public string Status
         {
@@ -75,17 +76,47 @@ namespace VisualControlV1
             myCalcValues = new CalcValues();
             myGrid.DataContext = myCalcValues;
 
+
             lblStatus.DataContext = this;
             myMap.DataContext = this;
 //            myPushpin.DataContext = this;
 
             cmbComSelect.ItemsSource = SerialPort.GetPortNames();
-            cmbComSelect.Text = "COM3";
+            cmbComSelect.Text = "COM6";
+
+            Button dummyButton = new Button();
+
+            CommandBinding commandBinding = new CommandBinding(ButtonClickCommand, ButtonClickCommandHandler);
+            this.CommandBindings.Add(commandBinding);
+            this.currentPosition.Command = ButtonClickCommand;
+
+            CalcValues.SomethingHappened += new EventHandler(pageHome_SomethingHappened);
         }
 
 
+        void pageHome_SomethingHappened(object sender, EventArgs e)
+        {
+            Dispatcher.BeginInvoke(new Action(delegate ()
+            {
+            SomeMethod();
+              }));
 
+        }
 
+        private void ButtonClickCommandHandler(object sender, ExecutedRoutedEventArgs e)
+        {
+            //MessageBox.Show("Button Clicked");
+            //Pushpin thePushpin = new Pushpin();
+            //MapLayer.SetPosition(thePushpin, myCalcValues.CurrentLocation);
+            //myMap.Children.Add(thePushpin);
+            myPushpin.Location = myCalcValues.CurrentLocation;
+        }
+        public void SomeMethod()
+        {
+            ICommand command = this.currentPosition.Command;
+            command.Execute(this.currentPosition);
+        }
+    
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -98,8 +129,6 @@ namespace VisualControlV1
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
         }
-
-
 
         private void addNewPolygon()
         {
@@ -185,6 +214,14 @@ namespace VisualControlV1
             distance = radius*c;
             return distance; // distance in meters
         }
+
+        private void currentPosition_Click(object sender, RoutedEventArgs e)
+        {
+            Pushpin thePushpin = new Pushpin();
+            MapLayer.SetPosition(thePushpin, myCalcValues.CurrentLocation);
+            myMap.Children.Add(thePushpin);
+        }
+
 
         private void BtnPortOpen_Click(object sender, RoutedEventArgs e)
         {

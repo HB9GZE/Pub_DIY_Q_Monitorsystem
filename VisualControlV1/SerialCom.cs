@@ -13,7 +13,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Automation.Peers;
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     /// <summary>
     /// Establishes the serial communication and receives the send data

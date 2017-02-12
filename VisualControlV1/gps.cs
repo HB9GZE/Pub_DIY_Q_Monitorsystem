@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VisualControlV1
+namespace VisualControlV3
 {
     class Gps
     {
