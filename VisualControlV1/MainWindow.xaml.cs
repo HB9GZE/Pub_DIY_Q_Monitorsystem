@@ -86,37 +86,18 @@ namespace VisualControlV3
 
             Button dummyButton = new Button();
 
-            CommandBinding commandBinding = new CommandBinding(ButtonClickCommand, ButtonClickCommandHandler);
-            this.CommandBindings.Add(commandBinding);
-            this.currentPosition.Command = ButtonClickCommand;
-
-            CalcValues.SomethingHappened += new EventHandler(pageHome_SomethingHappened);
+            CalcValues.SomethingHappened += new EventHandler(SomethingHappened);
         }
 
 
-        void pageHome_SomethingHappened(object sender, EventArgs e)
+        void SomethingHappened(object sender, EventArgs e)
         {
             Dispatcher.BeginInvoke(new Action(delegate ()
             {
-            SomeMethod();
-              }));
+                myPushpin.Location = myCalcValues.CurrentLocation;
+            }));
 
         }
-
-        private void ButtonClickCommandHandler(object sender, ExecutedRoutedEventArgs e)
-        {
-            //MessageBox.Show("Button Clicked");
-            //Pushpin thePushpin = new Pushpin();
-            //MapLayer.SetPosition(thePushpin, myCalcValues.CurrentLocation);
-            //myMap.Children.Add(thePushpin);
-            myPushpin.Location = myCalcValues.CurrentLocation;
-        }
-        public void SomeMethod()
-        {
-            ICommand command = this.currentPosition.Command;
-            command.Execute(this.currentPosition);
-        }
-    
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -144,27 +125,8 @@ namespace VisualControlV3
                 new Location(47.3402, 8.4332),
                 new Location(47.3394, 8.4435)
             };
-
             myMap.Children.Add(polygon);
         }
-
-        //public void AddLocation(Location location)
-        //{
-        //    Dispatcher.Invoke(() =>
-        //    {
-        //        try
-        //        {
-        //            // Microsoft.Maps.MapControl.WPF.Location currentLocation = new Microsoft.Maps.MapControl.WPF.Location(location.latitude, location.longitude);
-
-        //            myPushpin.Location = location;
-        //        }
-        //        catch (Exception exc)
-        //        {
-        //        }
-        //    });
-        //}
-
-
 
         private void MapWithPushpins_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
