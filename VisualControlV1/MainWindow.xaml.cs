@@ -28,7 +28,6 @@ using OxyPlot;
 using OxyPlot.Series;
 
 
-
 namespace VisualControlV3
 {
     /// <summary>
@@ -40,8 +39,7 @@ namespace VisualControlV3
         private SerialCom mySerialCom;
         private string status;
         private bool initializing = false;
-        public static RoutedCommand ButtonClickCommand = new RoutedCommand();
-        public Button dummyButton { get; set; }
+
 
         public string Status
         {
@@ -50,14 +48,6 @@ namespace VisualControlV3
             {
                 status = value;
                 NotifyChangedStatus(new PropertyChangedEventArgs("Status"));
-            }
-        }
-
-        private void NotifyChangedStatus(PropertyChangedEventArgs e)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, e);
             }
         }
 
@@ -71,40 +61,27 @@ namespace VisualControlV3
             //Set map to Aerial mode with labels
             myMap.Mode = new AerialMode(true);
             //addNewPolygon();
-          
+
 
             myCalcValues = new CalcValues();
             myGrid.DataContext = myCalcValues;
 
 
             lblStatus.DataContext = this;
-            myMap.DataContext = this;
-//            myPushpin.DataContext = this;
+            //myMap.DataContext = this;
 
             cmbComSelect.ItemsSource = SerialPort.GetPortNames();
             cmbComSelect.Text = "COM6";
 
             Button dummyButton = new Button();
 
-            CalcValues.SomethingHappened += new EventHandler(SomethingHappened);
+            CalcValues.SomethingHappened += new EventHandler(MainWindow_SomethingHappened);
         }
 
 
-        void SomethingHappened(object sender, EventArgs e)
+        void MainWindow_SomethingHappened(object sender, EventArgs e)
         {
-            Dispatcher.BeginInvoke(new Action(delegate ()
-            {
-                myPushpin.Location = myCalcValues.CurrentLocation;
-            }));
-
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            Dispatcher.BeginInvoke(new Action(delegate() { myPushpin.Location = myCalcValues.CurrentLocation; }));
         }
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -152,13 +129,13 @@ namespace VisualControlV3
         {
             double distance = 0;
 
-            double dLat = (lat2 - lat1)/180*Math.PI;
-            double dLong = (long2 - long1)/180*Math.PI;
+            double dLat = (lat2 - lat1) / 180 * Math.PI;
+            double dLong = (long2 - long1) / 180 * Math.PI;
 
-            double a = Math.Sin(dLat/2)*Math.Sin(dLat/2)
-                       + Math.Cos(lat1/180*Math.PI)*Math.Cos(lat2/180*Math.PI)
-                       *Math.Sin(dLong/2)*Math.Sin(dLong/2);
-            double c = 2*Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2)
+                       + Math.Cos(lat1 / 180 * Math.PI) * Math.Cos(lat2 / 180 * Math.PI)
+                       * Math.Sin(dLong / 2) * Math.Sin(dLong / 2);
+            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
 
             //Calculate radius of earth
             // For this you can assume any of the two points.
@@ -166,14 +143,14 @@ namespace VisualControlV3
             double radiusP = 6356750; // Polar Radius
 
             //Numerator part of function
-            double nr = Math.Pow(radiusE*radiusP*Math.Cos(lat1/180*Math.PI), 2);
+            double nr = Math.Pow(radiusE * radiusP * Math.Cos(lat1 / 180 * Math.PI), 2);
             //Denominator part of the function
-            double dr = Math.Pow(radiusE*Math.Cos(lat1/180*Math.PI), 2)
-                        + Math.Pow(radiusP*Math.Sin(lat1/180*Math.PI), 2);
-            double radius = Math.Sqrt(nr/dr);
+            double dr = Math.Pow(radiusE * Math.Cos(lat1 / 180 * Math.PI), 2)
+                        + Math.Pow(radiusP * Math.Sin(lat1 / 180 * Math.PI), 2);
+            double radius = Math.Sqrt(nr / dr);
 
             //Calculate distance in meters.
-            distance = radius*c;
+            distance = radius * c;
             return distance; // distance in meters
         }
 
@@ -220,12 +197,12 @@ namespace VisualControlV3
                 mySerialCom.MySerialPort.Write("#mno2/");
                 mySerialCom.WriteByte(0x00);
                 mySerialCom.WriteByte(0x00);
+                myCalcValues.SetHeading = 0;
             }
             catch (Exception)
             {
                 MessageBox.Show("Open com port first!.", "Important Message");
             }
-
         }
 
         private void button_Click_South(object sender, RoutedEventArgs e)
@@ -235,12 +212,12 @@ namespace VisualControlV3
                 mySerialCom.MySerialPort.Write("#mso2/");
                 mySerialCom.WriteByte(0x0);
                 mySerialCom.WriteByte(0x0);
+                myCalcValues.SetHeading = 180;
             }
             catch (Exception)
             {
                 MessageBox.Show("Open com port first!.", "Important Message");
             }
-
         }
 
         private void button_Click_West(object sender, RoutedEventArgs e)
@@ -250,12 +227,12 @@ namespace VisualControlV3
                 mySerialCom.MySerialPort.Write("#mwe2/");
                 mySerialCom.WriteByte(0x00);
                 mySerialCom.WriteByte(0x00);
+                myCalcValues.SetHeading = 270;
             }
             catch (Exception)
             {
                 MessageBox.Show("Open com port first!.", "Important Message");
             }
-
         }
 
         private void button_Click_East(object sender, RoutedEventArgs e)
@@ -265,12 +242,12 @@ namespace VisualControlV3
                 mySerialCom.MySerialPort.Write("#mea2/");
                 mySerialCom.WriteByte(0x00);
                 mySerialCom.WriteByte(0x00);
+                myCalcValues.SetHeading = 90;
             }
             catch (Exception)
             {
                 MessageBox.Show("Open com port first!.", "Important Message");
             }
-
         }
 
         private void button_Click_Hold(object sender, RoutedEventArgs e)
@@ -285,8 +262,8 @@ namespace VisualControlV3
             {
                 MessageBox.Show("Open com port first!.", "Important Message");
             }
-
         }
+
         private void button_Click_Landing(object sender, RoutedEventArgs e)
         {
             try
@@ -299,7 +276,6 @@ namespace VisualControlV3
             {
                 MessageBox.Show("Open com port first!.", "Important Message");
             }
-
         }
 
         private void button_Click_Start(object sender, RoutedEventArgs e)
@@ -384,6 +360,82 @@ namespace VisualControlV3
             {
                 MessageBox.Show("Open com port first!.", "Important Message");
             }
+        }
+
+
+        private void sliderKP_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#kpp2/");
+                mySerialCom.WriteByte((byte) sliderKP.Value);
+                mySerialCom.WriteByte((byte) sliderKP.Value);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
+
+        private void sliderKD_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#kdp2/");
+                mySerialCom.WriteByte((byte) sliderKD.Value);
+                mySerialCom.WriteByte((byte) sliderKD.Value);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
+
+        private void sliderKI_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#kip2/");
+                mySerialCom.WriteByte((byte) sliderKI.Value);
+                mySerialCom.WriteByte((byte) sliderKI.Value);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
+
+        private void sliderSF_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (initializing == false)
+            {
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#sfm2/");
+                    mySerialCom.WriteByte((byte) sliderSF.Value);
+                    mySerialCom.WriteByte((byte) sliderSF.Value);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
+            }
+        }
+
+        private void NotifyChangedStatus(PropertyChangedEventArgs e)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, e);
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

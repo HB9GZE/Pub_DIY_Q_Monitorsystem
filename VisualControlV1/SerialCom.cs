@@ -20,7 +20,7 @@ namespace VisualControlV3
     /// </summary>
     public class SerialCom : IObservable<ReceivedRawData>
     {
-        private const int DATABYTESBEFOREREAD = 60;
+        private const int DATABYTESBEFOREREAD = 90;
         private static SerialPort mySerialPort;
         private readonly List<IObserver<ReceivedRawData>> observers;
         private byte[] data;

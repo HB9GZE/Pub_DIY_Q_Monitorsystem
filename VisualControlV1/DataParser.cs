@@ -78,14 +78,31 @@ namespace VisualControlV3
                 {
                     if (dataBoxByte[0] == '#')
                     {
-                        if (dataBoxByte[1] == 't')
+                        if (dataBoxByte[1] == 'a')
                         {
-                            if (dataBoxByte[2] == 't')
+                            if (dataBoxByte[2] == 'l')
                             {
-                                if (dataBoxByte[3] == 'c')
+                                if (dataBoxByte[3] == 'p')
                                 {
-                                    receivedRawData.TtcMsb = dataBoxByte[7];
-                                    receivedRawData.TtcLsb = dataBoxByte[6];
+                                    receivedRawData.AlpMsb = dataBoxByte[7];
+                                    receivedRawData.AlpLsb = dataBoxByte[6];
+                                }
+                            }
+                        }
+                    }
+
+                    if (dataBoxByte[0] == '#')
+                    {
+                        if (dataBoxByte[1] == 'a')
+                        {
+                            if (dataBoxByte[2] == 'l')
+                            {
+                                if (dataBoxByte[3] == 'g')
+                                {
+                                    receivedRawData.AlgB1 = dataBoxByte[6];
+                                    receivedRawData.AlgB2 = dataBoxByte[7];
+                                    receivedRawData.AlgB3 = dataBoxByte[8];
+                                    receivedRawData.AlgB4 = dataBoxByte[9];
                                 }
                             }
                         }
@@ -95,12 +112,14 @@ namespace VisualControlV3
                     {
                         if (dataBoxByte[1] == 'c')
                         {
-                            if (dataBoxByte[2] == 'c')
+                            if (dataBoxByte[2] == 'v')
                             {
-                                if (dataBoxByte[3] == 'u')
+                                if (dataBoxByte[3] == 'g')
                                 {
-                                    receivedRawData.CcuMsb = dataBoxByte[7];
-                                    receivedRawData.CcuLsb = dataBoxByte[6];
+                                    receivedRawData.CvgB1 = dataBoxByte[6];
+                                    receivedRawData.CvgB2 = dataBoxByte[7];
+                                    receivedRawData.CvgB3 = dataBoxByte[8];
+                                    receivedRawData.CvgB4 = dataBoxByte[9];
                                 }
                             }
                         }
@@ -108,14 +127,14 @@ namespace VisualControlV3
 
                     if (dataBoxByte[0] == '#')
                     {
-                        if (dataBoxByte[1] == 'm')
+                        if (dataBoxByte[1] == 'v')
                         {
-                            if (dataBoxByte[2] == 'a')
+                            if (dataBoxByte[2] == 'l')
                             {
-                                if (dataBoxByte[3] == 'h')
+                                if (dataBoxByte[3] == 't')
                                 {
-                                    receivedRawData.MahMsb = dataBoxByte[7];
-                                    receivedRawData.MahLsb = dataBoxByte[6];
+                                    receivedRawData.VltMsb = dataBoxByte[7];
+                                    receivedRawData.VltLsb = dataBoxByte[6];
                                 }
                             }
                         }
@@ -200,10 +219,23 @@ namespace VisualControlV3
                         }
                     }
 
-
-
+                    if (dataBoxByte[0] == '#')
+                    {
+                        if (dataBoxByte[1] == 'h')
+                        {
+                            if (dataBoxByte[2] == 'a')
+                            {
+                                if (dataBoxByte[3] == 'g')
+                                {
+                                    receivedRawData.HagB1 = dataBoxByte[6];
+                                    receivedRawData.HagB2 = dataBoxByte[7];
+                                    receivedRawData.HagB3 = dataBoxByte[8];
+                                    receivedRawData.HagB4 = dataBoxByte[9];
+                                }
+                            }
+                        }
+                    }
                 }
-
             }
 
             for (int i = 0; i < 11; i++)

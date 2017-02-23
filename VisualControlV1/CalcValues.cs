@@ -40,7 +40,6 @@ namespace VisualControlV3
         private double[] pitchAngleArray = new double[200];
         int currentArrayCounter = 0;
 
-        private int dechargeMAH;
         private IList<DataPoint> points;
         private IList<DataPoint> points2;
 
@@ -54,18 +53,28 @@ namespace VisualControlV3
         private double setHeading;
         private double altPressure;
         private double altGPS;
+        private double velocityGPS;
+        private double headingGPS;
 
         private Location currentLocation;
-        private bool isClicked;
 
-
-        public bool IsClicked
+        public double VelocityGPS
         {
-            get { return isClicked; }
+            get { return velocityGPS; }
             set
             {
-                isClicked = value;
-                NotifyChangedValue(new PropertyChangedEventArgs("IsClicked"));
+                velocityGPS = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("VelocityGPS"));
+            }
+        }
+
+        public double HeadingGPS
+        {
+            get { return headingGPS; }
+            set
+            {
+                headingGPS = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("HeadingGPS"));
             }
         }
 
@@ -89,8 +98,6 @@ namespace VisualControlV3
             }
         }
 
-
-
         public double Latitude
         {
             get { return latitude; }
@@ -103,28 +110,30 @@ namespace VisualControlV3
 
         public double SetHeading
         {
-            get { return longitude; }
+            get { return setHeading; }
             set
             {
                 setHeading = value;
                 NotifyChangedValue(new PropertyChangedEventArgs("SetHeading"));
             }
         }
+
         public double AltPressure
         {
             get { return altPressure; }
             set
             {
-                longitude = value;
+                altPressure = value;
                 NotifyChangedValue(new PropertyChangedEventArgs("AltPressure"));
             }
         }
+
         public double AltGPS
         {
             get { return altGPS; }
             set
             {
-                longitude = value;
+                altGPS = value;
                 NotifyChangedValue(new PropertyChangedEventArgs("AltGPS"));
             }
         }
@@ -223,36 +232,50 @@ namespace VisualControlV3
 
         public void calcValues()
         {
-            this.CurrentLocation = new Location();
-            this.CurrentLocation.Latitude = 47.338862;
-            this.CurrentLocation.Longitude = 8.443015;
         }
 
         public void showLonLatInWaypoints(ReceivedRawData data)
         {
-            Longitude = (double)(data.LonB4 + data.LonB3 * 256 + data.LonB2 * 256 * 256 + data.LonB1 * 256 * 256 * 256) / 10000000;
-            Latitude = (double)(data.LatB4 + data.LatB3 * 256 + data.LatB2 * 65536 + data.LatB1 * 16777216) / 10000000;
+            Longitude =
+                (double) (data.LonB4 + data.LonB3 * 256 + data.LonB2 * 256 * 256 + data.LonB1 * 256 * 256 * 256) /
+                10000000;
+            Latitude = (double) (data.LatB4 + data.LatB3 * 256 + data.LatB2 * 65536 + data.LatB1 * 16777216) / 10000000;
             CurrentLocation = new Location(Latitude, Longitude);
-            IsClicked = true;
             MakeSomethingHappen();
-
         }
 
+        public void showAltitudeGPS(ReceivedRawData data)
+        {
+            AltGPS = (double) (data.AlgB4 + data.AlgB3 * 256 + data.AlgB2 * 256 * 256 + data.AlgB1 * 256 * 256 * 256) /
+                     1000.0;
+        }
+
+        public void showHeadingGPS(ReceivedRawData data)
+        {
+            HeadingGPS =
+                (double) (data.HagB4 + data.HagB3 * 256 + data.HagB2 * 256 * 256 + data.HagB1 * 256 * 256 * 256);
+        }
+
+        public void showGroundSpeedGPS(ReceivedRawData data)
+        {
+            VelocityGPS =
+                (double) (data.CvgB4 + data.CvgB3 * 256 + data.CvgB2 * 256 * 256 + data.CvgB1 * 256 * 256 * 256) * 3.6 /
+                10000000;
+        }
 
         public static EventHandler SomethingHappened;
 
         public void MakeSomethingHappen()
         {
-                SomethingHappened(this, null);
+            SomethingHappened(this, null);
         }
-
 
         public void showAnglesInCockpit(ReceivedRawData data)
         {
             YawAngle = MathHelper.MakeInt(data.YanMsb, data.YanLsb);
             RollAngle = MathHelper.MakeInt(data.RanMsb, data.RanLsb);
             PitchAngle = MathHelper.MakeInt(data.PanMsb, data.PanLsb);
-            PitchAngleScaled = MathHelper.MakeInt(data.PanMsb, data.PanLsb)*(-0.5/45) + 1;
+            PitchAngleScaled = MathHelper.MakeInt(data.PanMsb, data.PanLsb) * (-0.5 / 45) + 1;
 
             int i = 0;
             while (i < 199)
@@ -287,71 +310,26 @@ namespace VisualControlV3
             Points2 = myPoints;
         }
 
-        public void calcNewAngle(double x, double y)
-        {
-            Debug.WriteLine("X:  " + x);
-            Debug.WriteLine("Y:  " + y);
-
-            var h = ((Panel) Application.Current.MainWindow.Content).ActualHeight;
-            var w = ((Panel) Application.Current.MainWindow.Content).ActualWidth;
-
-
-            Debug.WriteLine("hight:  " + x);
-            Debug.WriteLine("width:  " + y);
-
-
-            deltaX = x - 850;
-            deltaY = y - 400;
-
-            touchPointCounter++;
-
-            if (touchPointCounter > 2)
-            {
-                touchPointCounter = 2;
-
-                if (!(deltaX == 0) || !(deltaY == 0))
-                {
-                    NewAngle = NewAngle +
-                               (int)
-                                   ((Math.Atan2(deltaY, deltaX)*(180/Math.PI)) -
-                                    (Math.Atan2(oldDeltaY, oldDeltaX)*(180/Math.PI)));
-                }
-            }
-
-            Debug.WriteLine("NewAngle =:  " + NewAngle);
-
-            oldDeltaX = deltaX;
-            oldDeltaY = deltaY;
-        }
-
-        public void resetNewAngle()
-        {
-            touchPointCounter = 0;
-        }
-
-        public void calculateTimer3Count(ReceivedRawData data)
-        {
-            Timer3Count = MathHelper.MakeInt(data.TtcMsb, data.TtcLsb);
-            //Console.Out.WriteLine("This is the Timer3Count: ", Timer3Count);
-        }
-
-
-        public void calculateCurrentVoltage(ReceivedRawData data)
+        public void showCurrentVoltage(ReceivedRawData data)
         {
             int i = 0;
             double sumCurrentVoltageArray = 0;
 
-            if(((MathHelper.MakeInt(data.CcuMsb, data.CcuLsb)) * 0.00585) > 0)
+            if (((MathHelper.MakeInt(data.VltMsb, data.VltLsb)) * 0.00585) > 0)
             {
-                for (i=0; i < currentVoltageArray.Length-1; i++)
+                for (i = 0; i < currentVoltageArray.Length - 1; i++)
                 {
                     currentVoltageArray[i] = currentVoltageArray[i + 1];
                     sumCurrentVoltageArray += currentVoltageArray[i];
                 }
-                currentVoltageArray[9] = (MathHelper.MakeInt(data.CcuMsb, data.CcuLsb))*0.00585;
-                CurrentVoltage = (sumCurrentVoltageArray+currentVoltageArray[9]) / 10;
+                currentVoltageArray[9] = (MathHelper.MakeInt(data.VltMsb, data.VltLsb)) * 0.00585;
+                CurrentVoltage = (sumCurrentVoltageArray + currentVoltageArray[9]) / 10;
             }
+        }
 
+        public void showAltitudePressure(ReceivedRawData data)
+        {
+            AltPressure = ((data.AlpMsb << 8) + data.AlpLsb) / 100.0;
         }
 
         #region methods for INotifyPropertyChanged
@@ -384,9 +362,13 @@ namespace VisualControlV3
         /// <param name="value">Received Data</param>
         public void OnNext(ReceivedRawData value)
         {
-            calculateCurrentVoltage(value);
+            showCurrentVoltage(value);
             showAnglesInCockpit(value);
             showLonLatInWaypoints(value);
+            showAltitudePressure(value);
+            showAltitudeGPS(value);
+            showGroundSpeedGPS(value);
+            showHeadingGPS(value);
         }
 
         /// <summary>

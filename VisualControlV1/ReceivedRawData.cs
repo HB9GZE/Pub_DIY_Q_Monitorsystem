@@ -11,40 +11,19 @@ namespace VisualControlV3
     /// </summary>
     public class ReceivedRawData
     {
-        /// <summary>
-        /// Gets or sets the MSB/LSB of the timer3 (timer three counter) counter value
-        /// </summary>
-        public byte TtcMsb { get; set; }
-        public byte TtcLsb { get; set; }
+        public byte AlpMsb { get; set; } //altitude pressure sensor 64523 = 645,23 m
+        public byte AlpLsb { get; set; }
 
-        /// <summary>
-        ///  Gets or sets the MSB/LSB of the current current value
-        /// </summary>
-        public byte CcuMsb { get; set; }
-        public byte CcuLsb { get; set; }
+        public byte VltMsb { get; set; } //battery voltage
+        public byte VltLsb { get; set; }
 
-        /// <summary>
-        ///  Gets or sets the MSB/LSB of the mAh decharge value
-        /// </summary>
-        public byte MahMsb { get; set; }
-        public byte MahLsb { get; set; }
-
-        /// <summary>
-        ///  Gets or sets the MSB/LSB of the mAh decharge value
-        /// </summary>
-        public byte YanMsb { get; set; }
+        public byte YanMsb { get; set; } //yaw
         public byte YanLsb { get; set; }
 
-        /// <summary>
-        ///  Gets or sets the MSB/LSB of the mAh decharge value
-        /// </summary>
-        public byte RanMsb { get; set; }
+        public byte RanMsb { get; set; } //roll
         public byte RanLsb { get; set; }
 
-        /// <summary>
-        ///  Gets or sets the MSB/LSB of the mAh decharge value
-        /// </summary>
-        public byte PanMsb { get; set; }
+        public byte PanMsb { get; set; } //pitch
         public byte PanLsb { get; set; }
 
         public byte LonB1 { get; set; }
@@ -57,6 +36,19 @@ namespace VisualControlV3
         public byte LatB3 { get; set; }
         public byte LatB4 { get; set; }
 
+        public byte CvgB1 { get; set; }
+        public byte CvgB2 { get; set; }
+        public byte CvgB3 { get; set; }
+        public byte CvgB4 { get; set; }
 
+        public byte AlgB1 { get; set; }
+        public byte AlgB2 { get; set; }
+        public byte AlgB3 { get; set; }
+        public byte AlgB4 { get; set; }
+
+        public byte HagB1 { get; set; }
+        public byte HagB2 { get; set; }
+        public byte HagB3 { get; set; }
+        public byte HagB4 { get; set; }
     }
 }
