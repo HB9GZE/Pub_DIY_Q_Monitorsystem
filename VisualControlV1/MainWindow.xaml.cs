@@ -334,6 +334,20 @@ namespace VisualControlV3
             }
         }
 
+        private void button_Click_CalMagneto(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                mySerialCom.MySerialPort.Write("#cam2/");
+                mySerialCom.WriteByte(0x00);
+                mySerialCom.WriteByte(0x00);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
+
         private void button_Click_RelPressureZero(object sender, RoutedEventArgs e)
         {
             try
@@ -368,8 +382,9 @@ namespace VisualControlV3
             try
             {
                 mySerialCom.MySerialPort.Write("#kpp2/");
-                mySerialCom.WriteByte((byte) sliderKP.Value);
-                mySerialCom.WriteByte((byte) sliderKP.Value);
+                short dummy = (short)(sliderKP.Value * 100);
+                mySerialCom.WriteByte((byte)dummy);   //low byte
+                mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
             }
             catch (Exception)
             {

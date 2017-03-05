@@ -161,7 +161,7 @@
                     <oxy:PlotView x:Name="Plot1" Title="roll angle" Margin="33,36,117,421">
                         <oxy:PlotView.Axes>
                             <oxy:LinearAxis Position="Bottom" Minimum="1" Maximum="200" />
-                            <oxy:LinearAxis Position="Left" Minimum="-45" Maximum="45" />
+                            <oxy:LinearAxis Position="Left" Minimum="-30" Maximum="30" />
                         </oxy:PlotView.Axes>
                         <oxy:PlotView.Series>
                             <oxy:LineSeries ItemsSource="{Binding Points}"/>
@@ -171,7 +171,7 @@
                     <oxy:PlotView x:Name="Plot2" Title="pitch angle" Margin="32,415,117,36">
                         <oxy:PlotView.Axes>
                             <oxy:LinearAxis Position="Bottom" Minimum="1" Maximum="200" />
-                            <oxy:LinearAxis Position="Left" Minimum="-45" Maximum="45" />
+                            <oxy:LinearAxis Position="Left" Minimum="-30" Maximum="30" />
                         </oxy:PlotView.Axes>
                         <oxy:PlotView.Series>
                             <oxy:LineSeries ItemsSource="{Binding Points2}"/>
@@ -195,10 +195,11 @@
                     <Button x:Name="buttonCalEuler" Style="{StaticResource MyButton}" Content="Cal Euler" Margin="15,40,1054,671" Click="button_Click_CalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" RenderTransformOrigin="-1.208,0.52" Grid.ColumnSpan="2"/>
 
                     <Button x:Name="buttonNoCalEuler" Style="{StaticResource MyButton}" Content="No Cal Euler" Margin="15,165,1054,546" Click="button_Click_NoCalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonCalMagneto" Style="{StaticResource MyButton}" Content="Cal Magneto" Margin="15,295,1054,416" Click="button_Click_CalMagneto" Background="LightSeaGreen" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
                     <Button x:Name="buttonSetRelPressureZero" Style="{StaticResource MyButton}" Content="set rel pressure zero" Margin="15,405,1054,306" Click="button_Click_RelPressureZero" Background="LightBlue" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
                     <Button x:Name="buttonReset" Style="{StaticResource MyButton}" Content="RESET" Margin="990,40,44,671" Click="button_Click_Reset" Background="Red" Grid.Row ="0" Grid.Column="2"/>
 
-                    <Slider x:Name="sliderKP" Background="#FF338BD4" Margin="225,40,369,691" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKP_ValueChanged" Grid.Column="2"/>
+                    <Slider x:Name="sliderKP" Background="#FF338BD4" Margin="225,40,369,691" Maximum="3" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKP_ValueChanged" Grid.Column="2" LargeChange="0.1"/>
                     <Slider x:Name="sliderKD" Background="#FF338BD4" Margin="225,100,369,631" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKD_ValueChanged" Grid.Column="2" />
                     <Slider x:Name="sliderKI" Background="#FF338BD4" Margin="225,165,369,566" Maximum="200" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKI_ValueChanged" Grid.Column="2" />
                     <Slider x:Name="sliderSF" Background="#FF338BD4" Margin="225,240,369,491" Maximum="300" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderSF_ValueChanged" Grid.Column="2" Value="200" />
