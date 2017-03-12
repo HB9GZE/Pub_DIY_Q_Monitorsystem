@@ -203,14 +203,16 @@
                     <Slider x:Name="sliderKD" Background="#FF338BD4" Margin="225,100,369,631" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKD_ValueChanged" Grid.Column="2" />
                     <Slider x:Name="sliderKI" Background="#FF338BD4" Margin="225,165,369,566" Maximum="200" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKI_ValueChanged" Grid.Column="2" />
                     <Slider x:Name="sliderSF" Background="#FF338BD4" Margin="225,240,369,491" Maximum="300" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderSF_ValueChanged" Grid.Column="2" Value="200" />
+                    <Slider x:Name="sliderBeta" Background="#FF338BD4" Margin="225,315,369,416" Maximum="10" TickFrequency="1" TickPlacement="BottomRight" ValueChanged="sliderBeta_ValueChanged" Grid.Column="2" Value="4" />
 
                     <Label x:Name="labelKP" ContentStringFormat="KP:  {0:F1}" Content="{Binding ElementName=sliderKP, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,30,209,691" Grid.Column="2"/>
                     <Label x:Name="labelKD" ContentStringFormat="KD:  {0:F1}" Content="{Binding ElementName=sliderKD, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,90,209,631" Grid.Column="2"/>
                     <Label x:Name="labelKI" ContentStringFormat="KI:  {0:F1}" Content="{Binding ElementName=sliderKI, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,155,209,566" Grid.Column="2"/>
                     <Label x:Name="labelSF" ContentStringFormat="SF:  {0:F1}" Content="{Binding ElementName=sliderSF, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,230,209,491" Grid.Column="2"/>
+                    <Label x:Name="labelBeta" ContentStringFormat="Beta:  {0:F1}" Content="{Binding ElementName=sliderBeta, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,307,209,414" Grid.Column="2"/>
 
-                    <Button x:Name="buttonStart2" Style="{StaticResource MyButton}" Content="Start Motor" Margin="305,345,729,366" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="2"/>
-                    <Button x:Name="buttonStop2" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="550,345,484,366"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="2"/>
+                    <Button x:Name="buttonStart2" Style="{StaticResource MyButton}" Content="Start Motor" Margin="990,135,44,576" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="2"/>
+                    <Button x:Name="buttonStop2" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="990,240,44,471"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="2"/>
 
                 </Grid>
 
