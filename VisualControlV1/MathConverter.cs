@@ -97,7 +97,7 @@ namespace VisualControlV3
                     else
                     {
                         // Handle Error - Next token is not the expected number
-                        throw new FormatException("Next token is not the expected number");
+                       // throw new FormatException("Next token is not the expected number");
                     }
                 }
 
@@ -153,7 +153,7 @@ namespace VisualControlV3
                     else
                     {
                         // Handle Error - Some non-numeric, operator, or Grouping character found in string
-                        throw new InvalidCastException();
+                        //throw new InvalidCastException();
                     }
                 }
             }

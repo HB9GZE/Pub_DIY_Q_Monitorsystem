@@ -397,8 +397,9 @@ namespace VisualControlV3
             try
             {
                 mySerialCom.MySerialPort.Write("#kdp2/");
-                mySerialCom.WriteByte((byte) sliderKD.Value);
-                mySerialCom.WriteByte((byte) sliderKD.Value);
+                short dummy = (short)(sliderKD.Value * 100);
+                mySerialCom.WriteByte((byte)dummy);   //low byte
+                mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
             }
             catch (Exception)
             {
@@ -411,8 +412,9 @@ namespace VisualControlV3
             try
             {
                 mySerialCom.MySerialPort.Write("#kip2/");
-                mySerialCom.WriteByte((byte) sliderKI.Value);
-                mySerialCom.WriteByte((byte) sliderKI.Value);
+                short dummy = (short)(sliderKI.Value * 100);
+                mySerialCom.WriteByte((byte)dummy);   //low byte
+                mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
             }
             catch (Exception)
             {
@@ -427,8 +429,9 @@ namespace VisualControlV3
                 try
                 {
                     mySerialCom.MySerialPort.Write("#sfm2/");
-                    mySerialCom.WriteByte((byte) sliderSF.Value);
-                    mySerialCom.WriteByte((byte) sliderSF.Value);
+                    short dummy = (short)(sliderSF.Value);
+                    mySerialCom.WriteByte((byte)dummy);   //low byte
+                    mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
                 }
                 catch (Exception)
                 {
