@@ -379,46 +379,73 @@ namespace VisualControlV3
 
         private void sliderKP_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            try
+            if (initializing == false)
             {
-                mySerialCom.MySerialPort.Write("#kpp2/");
-                short dummy = (short)(sliderKP.Value * 100);
-                mySerialCom.WriteByte((byte)dummy);   //low byte
-                mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Open com port first!.", "Important Message");
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#kpp2/");
+                    short dummy = (short) (sliderKP.Value * 100);
+                    mySerialCom.WriteByte((byte) dummy); //low byte
+                    mySerialCom.WriteByte((byte) (dummy >> 8)); //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
             }
         }
 
         private void sliderKD_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            try
+            if (initializing == false)
             {
-                mySerialCom.MySerialPort.Write("#kdp2/");
-                short dummy = (short)(sliderKD.Value * 100);
-                mySerialCom.WriteByte((byte)dummy);   //low byte
-                mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Open com port first!.", "Important Message");
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#kdp2/");
+                    short dummy = (short) (sliderKD.Value * 100);
+                    mySerialCom.WriteByte((byte) dummy); //low byte
+                    mySerialCom.WriteByte((byte) (dummy >> 8)); //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
             }
         }
 
         private void sliderKI_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            try
+            if (initializing == false)
             {
-                mySerialCom.MySerialPort.Write("#kip2/");
-                short dummy = (short)(sliderKI.Value * 100);
-                mySerialCom.WriteByte((byte)dummy);   //low byte
-                mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#kip2/");
+                    short dummy = (short) (sliderKI.Value * 100);
+                    mySerialCom.WriteByte((byte) dummy); //low byte
+                    mySerialCom.WriteByte((byte) (dummy >> 8)); //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
             }
-            catch (Exception)
+        }
+
+        private void sliderKO_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (initializing == false)
             {
-                MessageBox.Show("Open com port first!.", "Important Message");
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#kop2/");
+                    short dummy = (short) (sliderKO.Value * 100);
+                    mySerialCom.WriteByte((byte) dummy); //low byte
+                    mySerialCom.WriteByte((byte) (dummy >> 8)); //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
             }
         }
 

@@ -25,7 +25,7 @@
         </Grid.RowDefinitions>
         <Line Grid.Row="1" X2="1" VerticalAlignment="Top" Stroke="Gray" Stretch="Fill" Height="1" />
 
-        <TabControl Grid.Column="0" Margin="0,0,0,0" SelectedIndex="0" SelectionChanged="TabControl_SelectionChanged">
+        <TabControl Grid.Column="0" SelectedIndex="0" SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Control View" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
                 <Grid Margin="0,0,0,0" ShowGridLines="False">
                     <Grid.ColumnDefinitions>
@@ -97,7 +97,7 @@
                     <Label x:Name="labelVoltage" Style="{StaticResource MyLabelVoltage}" Background="LightCoral" ContentStringFormat="Voltage is:  {0:F1}  Volt"  Content="{Binding CurrentVoltage }" HorizontalAlignment="Center" Height="50" Margin="26,100,10,0" VerticalAlignment="Top" Width="265" Grid.Row ="0" Grid.Column="3"/>
 
                     <Label x:Name="labelYaw" Style="{StaticResource MyLabel}" Background="LightGreen" ContentStringFormat="Yaw:  {0} deg" Content="{Binding YawAngle}" HorizontalAlignment="Left" Height="34" Margin="137,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.ColumnSpan="2"/>
-                    <Label x:Name="labelRoll" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Roll:  {0} deg" Content="{Binding RollAngle}" HorizontalAlignment="Left" Height="34" Margin="365,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="2"/>
+                    <Label x:Name="labelRoll" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Roll:  {0} deg" Content="{Binding MinusRollAngle}" HorizontalAlignment="Left" Height="34" Margin="365,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="2"/>
                     <Label x:Name="labelPitch" Style="{StaticResource MyLabel}" Background="LightBlue" ContentStringFormat="Pitch:  {0} deg" Content="{Binding PitchAngle}" HorizontalAlignment="Left" Height="34" Margin="150,5,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="2"/>
                     <Label x:Name="labelSetHeading" Style="{StaticResource MyLabel}" Background="LightGreen" ContentStringFormat="Set heading to:  {0} deg" Content="{Binding SetHeading}" HorizontalAlignment="Left" Height="34" Margin="142,115,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.ColumnSpan="2"/>
                     <Label x:Name="labelAltPressure" Style="{StaticResource MyLabel}" Background="LightYellow" ContentStringFormat="Alt Pressure:  {0:F1} m" Content="{Binding AltPressure}" HorizontalAlignment="Left" Height="34" Margin="0,240,0,0" VerticalAlignment="Top" Width="160" Grid.Row="1" Grid.Column="1"/>
@@ -156,7 +156,7 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Monitor" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
+            <TabItem Header="Monitor" Height="20" VerticalAlignment="Top" Margin="0,0,-5,0" HorizontalAlignment="Left" Width="115">
                 <Grid Name="myGrid2">
                     <oxy:PlotView x:Name="Plot1" Title="roll angle" Margin="33,36,117,421">
                         <oxy:PlotView.Axes>
@@ -180,45 +180,45 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Settings" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="110">
+            <TabItem Header="Settings" Height="20" VerticalAlignment="Top" Margin="0" HorizontalAlignment="Left" Width="115">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="57*"/>
                         <ColumnDefinition Width="35*"/>
-                        <ColumnDefinition Width="1154*"/>
+                        <ColumnDefinition Width="320*"/>
+                        <ColumnDefinition Width="834*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="50" />
                     </Grid.RowDefinitions>
 
-                    <Button x:Name="buttonCalEuler" Style="{StaticResource MyButton}" Content="Cal Euler" Margin="15,40,1054,671" Click="button_Click_CalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" RenderTransformOrigin="-1.208,0.52" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonCalEuler" Style="{StaticResource MyButton}" Content="Cal Euler" Margin="15,40,220,671" Click="button_Click_CalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" RenderTransformOrigin="-1.208,0.52" Grid.ColumnSpan="2"/>
 
-                    <Button x:Name="buttonNoCalEuler" Style="{StaticResource MyButton}" Content="No Cal Euler" Margin="15,165,1054,546" Click="button_Click_NoCalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Button x:Name="buttonCalMagneto" Style="{StaticResource MyButton}" Content="Cal Magneto" Margin="15,295,1054,416" Click="button_Click_CalMagneto" Background="LightSeaGreen" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Button x:Name="buttonSetRelPressureZero" Style="{StaticResource MyButton}" Content="set rel pressure zero" Margin="15,405,1054,306" Click="button_Click_RelPressureZero" Background="LightBlue" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Button x:Name="buttonReset" Style="{StaticResource MyButton}" Content="RESET" Margin="990,40,44,671" Click="button_Click_Reset" Background="Red" Grid.Row ="0" Grid.Column="2"/>
+                    <Button x:Name="buttonNoCalEuler" Style="{StaticResource MyButton}" Content="No Cal Euler" Margin="15,135,220,576" Click="button_Click_NoCalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonCalMagneto" Style="{StaticResource MyButton}" Content="Cal Magneto" Margin="15,240,220,471" Click="button_Click_CalMagneto" Background="LightSeaGreen" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonSetRelPressureZero" Style="{StaticResource MyButton}" Content="set rel pressure zero" Margin="15,345,220,366" Click="button_Click_RelPressureZero" Background="LightBlue" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonReset" Style="{StaticResource MyButton}" Content="RESET" Margin="670,40,44,671" Click="button_Click_Reset" Background="Red" Grid.Row ="0" Grid.Column="3"/>
 
-                    <Slider x:Name="sliderKP" Background="#FF338BD4" Margin="225,40,369,691" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKP_ValueChanged" Grid.Column="2" LargeChange="0.1"/>
-                    <Slider x:Name="sliderKD" Background="#FF338BD4" Margin="225,100,369,631" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKD_ValueChanged" Grid.Column="2" />
-                    <Slider x:Name="sliderKI" Background="#FF338BD4" Margin="225,165,369,566" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKI_ValueChanged" Grid.Column="2" />
-                    <Slider x:Name="sliderSF" Background="#FF338BD4" Margin="225,240,369,491" Maximum="400" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderSF_ValueChanged" Grid.Column="2" Value="333" />
-                    <Slider x:Name="sliderBeta" Background="#FF338BD4" Margin="225,315,369,416" Maximum="100" TickFrequency="1" TickPlacement="BottomRight" ValueChanged="sliderBeta_ValueChanged" Grid.Column="2" Value="4" />
+                    <Slider x:Name="sliderKP" Background="#FF338BD4" Margin="225,40,369,690" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKP_ValueChanged" Grid.Column="2" LargeChange="0.1" Value="16" Grid.ColumnSpan="2"/>
+                    <Slider x:Name="sliderKD" Background="#FF338BD4" Margin="225,100,369,630" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKD_ValueChanged" Grid.Column="2" Value="30" Grid.ColumnSpan="2" />
+                    <Slider x:Name="sliderKI" Background="#FF338BD4" Margin="225,160,369,570" Maximum="200" TickFrequency="20" TickPlacement="BottomRight" ValueChanged="sliderKI_ValueChanged" Grid.Column="2" Value="10" Grid.ColumnSpan="2" />
+                    <Slider x:Name="sliderKO" Background="#FF338BD4" Margin="225,220,369,510" TickPlacement="BottomRight" ValueChanged="sliderKO_ValueChanged" Grid.Column="2" Value="3" LargeChange="0.1" Maximum="40" Grid.ColumnSpan="2" />
+                    <Slider x:Name="sliderSF" Background="#FF338BD4" Margin="225,345,369,386" Maximum="400" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderSF_ValueChanged" Grid.Column="2" Value="333" Grid.ColumnSpan="2" />
+                    <Slider x:Name="sliderBeta" Background="#FF338BD4" Margin="225,425,369,306" TickFrequency="1" TickPlacement="BottomRight" ValueChanged="sliderBeta_ValueChanged" Grid.Column="2" Value="0.1" Grid.ColumnSpan="2" />
 
-                    <Label x:Name="labelKP" ContentStringFormat="KP:  {0:F1}" Content="{Binding ElementName=sliderKP, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/10}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,30,209,691" Grid.Column="2"/>
-                    <Label x:Name="labelKD" ContentStringFormat="KD:  {0:F1}" Content="{Binding ElementName=sliderKD, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/10}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,90,209,631" Grid.Column="2"/>
-                    <Label x:Name="labelKI" ContentStringFormat="KI:  {0:F3}" Content="{Binding ElementName=sliderKI, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/1000}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,155,209,566" Grid.Column="2"/>
-                    <Label x:Name="labelSF" ContentStringFormat="SF:  {0:F1}" Content="{Binding ElementName=sliderSF, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,230,209,491" Grid.Column="2"/>
-                    <Label x:Name="labelBeta" ContentStringFormat="Beta:  {0:F1}" Content="{Binding ElementName=sliderBeta, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="810,307,209,414" Grid.Column="2"/>
+                    <Label x:Name="labelKP" ContentStringFormat="KP:  {0:F1}" Content="{Binding ElementName=sliderKP, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/10}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,30,209,691" Grid.Column="3"/>
+                    <Label x:Name="labelKD" ContentStringFormat="KD:  {0:F1}" Content="{Binding ElementName=sliderKD, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/10}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,90,209,631" Grid.Column="3"/>
+                    <Label x:Name="labelKI" ContentStringFormat="KI:  {0:F3}" Content="{Binding ElementName=sliderKI, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/1000}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,155,209,566" Grid.Column="3"/>
+                    <Label x:Name="labelKO" ContentStringFormat="KO:  {0:F2}" Content="{Binding ElementName=sliderKO, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/1}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,220,209,506" Grid.Column="3"/>
+                    <Label x:Name="labelSF" ContentStringFormat="SF:  {0:F0}" Content="{Binding ElementName=sliderSF, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,335,209,386" Grid.Column="3"/>
+                    <Label x:Name="labelBeta" ContentStringFormat="Beta:  {0:F1}" Content="{Binding ElementName=sliderBeta, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,417,209,304" Grid.Column="3"/>
 
-                    <Button x:Name="buttonStart2" Style="{StaticResource MyButton}" Content="Start Motor" Margin="990,135,44,576" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="2"/>
-                    <Button x:Name="buttonStop2" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="990,240,44,471"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="2"/>
+                    <Button x:Name="buttonStart2" Style="{StaticResource MyButton}" Content="Start Motor" Margin="670,135,44,576" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="3"/>
+                    <Button x:Name="buttonStop2" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="670,240,44,471"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="3"/>
 
                 </Grid>
-
             </TabItem>
-
-
         </TabControl>
 
         <!-- Button -->

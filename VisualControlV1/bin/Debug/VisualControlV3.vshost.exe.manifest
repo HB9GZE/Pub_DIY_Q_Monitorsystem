@@ -186,14 +186,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VisualControlV3.exe" size="84992">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="VisualControlV3.exe" size="86016">
       <assemblyIdentity name="VisualControlV3" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>S8XO4fgZEzauQ8IykiU5Qn4LERLUJy1/T6vIGHVHSxg=</dsig:DigestValue>
+        <dsig:DigestValue>+zFqdbRObY12nLUVAHQPW8ufndtIWftxdgjdW533RE0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

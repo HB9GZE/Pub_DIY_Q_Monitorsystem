@@ -46,6 +46,7 @@ namespace VisualControlV3
         private double yawAngle;
         private double pitchAngle, pitchAngleScaled;
         private double rollAngle;
+        private double minusRollAngle;
 
         private double longitude;
         private double latitude;
@@ -178,6 +179,16 @@ namespace VisualControlV3
             }
         }
 
+        public double MinusRollAngle
+        {
+            get { return minusRollAngle; }
+            set
+            {
+                minusRollAngle = value;
+                NotifyChangedValue(new PropertyChangedEventArgs("MinusRollAngle"));
+            }
+        }
+
         public IList<DataPoint> Points
         {
             get { return points; }
@@ -274,6 +285,7 @@ namespace VisualControlV3
         {
             YawAngle = MathHelper.MakeInt(data.YanMsb, data.YanLsb);
             RollAngle = MathHelper.MakeInt(data.RanMsb, data.RanLsb);
+            MinusRollAngle = RollAngle * -1;
             PitchAngle = MathHelper.MakeInt(data.PanMsb, data.PanLsb);
             PitchAngleScaled = MathHelper.MakeInt(data.PanMsb, data.PanLsb) * (-0.5 / 45) + 1;
 
