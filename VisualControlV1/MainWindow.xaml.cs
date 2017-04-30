@@ -449,6 +449,59 @@ namespace VisualControlV3
             }
         }
 
+        private void sliderK1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (initializing == false)
+            {
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#k112/");
+                    short dummy = (short)(sliderK1.Value * 100);
+                    mySerialCom.WriteByte((byte)dummy); //low byte
+                    mySerialCom.WriteByte((byte)(dummy >> 8)); //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
+            }
+        }
+
+        private void sliderK2_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (initializing == false)
+            {
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#k222/");
+                    short dummy = (short)(sliderK2.Value * 100);
+                    mySerialCom.WriteByte((byte)dummy); //low byte
+                    mySerialCom.WriteByte((byte)(dummy >> 8)); //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
+            }
+        }
+
+        private void sliderKTOT_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (initializing == false)
+            {
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#kto2/");
+                    short dummy = (short)(sliderKTOT.Value * 100);
+                    mySerialCom.WriteByte((byte)dummy); //low byte
+                    mySerialCom.WriteByte((byte)(dummy >> 8)); //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
+            }
+        }
         private void sliderSF_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (initializing == false)
