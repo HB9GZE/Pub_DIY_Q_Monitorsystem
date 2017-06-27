@@ -538,6 +538,24 @@ namespace VisualControlV3
             }
         }
 
+        private void sliderOutputLimit_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (initializing == false)
+            {
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#mol2/");
+                    short dummy = (short)(sliderOutputLimit.Value * 100);
+                    mySerialCom.WriteByte((byte)dummy);   //low byte
+                    mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
+            }
+        }
+
         private void NotifyChangedStatus(PropertyChangedEventArgs e)
         {
             if (PropertyChanged != null)
