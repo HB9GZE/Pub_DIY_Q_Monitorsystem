@@ -556,6 +556,42 @@ namespace VisualControlV3
             }
         }
 
+        private void SetMahonyKp_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (initializing == false)
+            {
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#smp2/");
+                    short dummy = (short)(sliderSetMahonyKp.Value * 100);
+                    mySerialCom.WriteByte((byte)dummy);   //low byte
+                    mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
+            }
+        }
+
+        private void SetMahonyKi_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (initializing == false)
+            {
+                try
+                {
+                    mySerialCom.MySerialPort.Write("#smi2/");
+                    short dummy = (short)(sliderSetMahonyKi.Value * 100);
+                    mySerialCom.WriteByte((byte)dummy);   //low byte
+                    mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Open com port first!.", "Important Message");
+                }
+            }
+        }
+
         private void NotifyChangedStatus(PropertyChangedEventArgs e)
         {
             if (PropertyChanged != null)
@@ -571,5 +607,7 @@ namespace VisualControlV3
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+
     }
 }
