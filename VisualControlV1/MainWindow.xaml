@@ -88,7 +88,7 @@
                             </Path.Data>
                             <Path.RenderTransform>
                                 <RotateTransform CenterX="100" CenterY="100"
-													 Angle="{Binding Path = RollAngle}" />
+													 Angle="{Binding Path = MinusRollAngle}" />
                             </Path.RenderTransform>
                         </Path>
                     </Viewbox>
@@ -186,6 +186,55 @@
                         <ColumnDefinition Width="57*"/>
                         <ColumnDefinition Width="35*"/>
                         <ColumnDefinition Width="320*"/>
+                        <ColumnDefinition Width="105*"/>
+                        <ColumnDefinition Width="729*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="50" />
+                    </Grid.RowDefinitions>
+
+                    <Slider x:Name="sliderKP" Background="#FF338BD4" Margin="225,40,369,690" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKP_ValueChanged" Grid.Column="2" LargeChange="0.1" Value="10" Grid.ColumnSpan="3"/>
+                    <Slider x:Name="sliderKD" Background="#FF338BD4" Margin="225,100,369,630" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKD_ValueChanged" Grid.Column="2" Value="15" Grid.ColumnSpan="3" />
+                    <Slider x:Name="sliderKI" Background="#FF338BD4" Margin="225,160,369,570" Maximum="500" TickFrequency="20" TickPlacement="BottomRight" ValueChanged="sliderKI_ValueChanged" Grid.Column="2" Value="200" Grid.ColumnSpan="3" />
+                    <Slider x:Name="sliderKO" Background="#FF338BD4" Margin="225,220,369,510" TickPlacement="BottomRight" ValueChanged="sliderKO_ValueChanged" Grid.Column="2" Value="3" LargeChange="0.1" Maximum="20" Grid.ColumnSpan="3" />
+                    <Slider x:Name="sliderK1" Background="#FF338BD4" Margin="225,280,369,450" TickPlacement="BottomRight" ValueChanged="sliderK1_ValueChanged" Grid.Column="2" Value="70" Maximum="298" Grid.ColumnSpan="3" TickFrequency="10" />
+                    <Slider x:Name="sliderK2" Background="#FF338BD4" Margin="225,340,369,390" TickPlacement="BottomRight" ValueChanged="sliderK2_ValueChanged" Grid.Column="2" Value="250" Maximum="298" Grid.ColumnSpan="3" TickFrequency="10" />
+                    <Slider x:Name="sliderKTOT" Background="#FF338BD4" Margin="225,400,369,330" TickPlacement="BottomRight" ValueChanged="sliderKTOT_ValueChanged" Grid.Column="2" Value="140" Maximum="298" Grid.ColumnSpan="3" TickFrequency="10" />
+                    <Slider x:Name="sliderSF" Background="#FF338BD4" Margin="225,460,369,270" Maximum="400" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderSF_ValueChanged" Grid.Column="2" Value="333" Grid.ColumnSpan="3" />
+                    <Slider x:Name="sliderBeta" Background="#FF338BD4" Margin="225,520,369,210" TickFrequency="1" TickPlacement="BottomRight" ValueChanged="sliderBeta_ValueChanged" Grid.Column="2" Value="4" Grid.ColumnSpan="3" />
+                    <Slider x:Name="sliderOutputLimit" Background="#FF338BD4" Margin="225,580,369,150" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderOutputLimit_ValueChanged" Grid.Column="2" Value="200" Grid.ColumnSpan="3" Maximum="300" />
+                    <Slider x:Name="sliderSetDeltaT" Background="#FF338BD4" Margin="225,640,369,90" TickPlacement="BottomRight" ValueChanged="SetDeltaT_ValueChanged" Grid.Column="2" Value="100" Grid.ColumnSpan="3" Maximum="500" TickFrequency="10" SmallChange="0.01" />
+                    <Slider x:Name="sliderSetAlpha" Background="#FF338BD4" Margin="225,700,369,30" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="SetAlpha_ValueChanged" Grid.Column="2" Grid.ColumnSpan="3" Maximum="100" Value="98" />
+
+
+                    <Label x:Name="labelKP" ContentStringFormat="KP:  {0:F1}" Content="{Binding ElementName=sliderKP, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/10}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,40,209,690" Grid.Column="4"/>
+                    <Label x:Name="labelKD" ContentStringFormat="KD:  {0:F1}" Content="{Binding ElementName=sliderKD, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/10}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,100,209,630" Grid.Column="4"/>
+                    <Label x:Name="labelKI" ContentStringFormat="KI:  {0:F3}" Content="{Binding ElementName=sliderKI, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/1000}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,160,209,570" Grid.Column="4"/>
+                    <Label x:Name="labelKO" ContentStringFormat="KO:  {0:F2}" Content="{Binding ElementName=sliderKO, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/1}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,220,209,510" Grid.Column="4"/>
+                    <Label x:Name="labelK1" ContentStringFormat="K1:  {0:F2}" Content="{Binding ElementName=sliderK1, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/100}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,280,209,450" Grid.Column="4"/>
+                    <Label x:Name="labelK2" ContentStringFormat="K2:  {0:F2}" Content="{Binding ElementName=sliderK2, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/100}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,340,209,390" Grid.Column="4" RenderTransformOrigin="0.5,0.5"/>
+                    <Label x:Name="labelKTOT" ContentStringFormat="KTOT:  {0:F2}" Content="{Binding ElementName=sliderKTOT, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/100}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,400,209,330" Grid.Column="4" RenderTransformOrigin="0.5,0.5"/>
+                    <Label x:Name="labelSF" ContentStringFormat="SF:  {0:F0}" Content="{Binding ElementName=sliderSF, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,460,209,270" Grid.Column="4"/>
+                    <Label x:Name="labelBeta" ContentStringFormat="Beta:  {0:F1}" Content="{Binding ElementName=sliderBeta, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,520,209,210" Grid.Column="4"/>
+                    <Label x:Name="labelOutputLimit" ContentStringFormat="OutputLimit:  {0:F1}" Content="{Binding ElementName=sliderOutputLimit, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,580,209,150" Grid.Column="4"/>
+                    <Label x:Name="labelSetDeltaT" ContentStringFormat="deltaT:  {0:F2}" Content="{Binding ElementName=sliderSetDeltaT, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/1000}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,640,209,80" Grid.Column="4"/>
+                    <Label x:Name="labelSetAlpha" ContentStringFormat="alpha:  {0:F2}" Content="{Binding ElementName=sliderSetAlpha, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/100}" Background="#FFEAEEF5" BorderBrush="Black" Margin="385,700,209,20" Grid.Column="4"/>
+
+                    <Button x:Name="buttonStart2" Style="{StaticResource MyButton}" Content="Start Motor" Margin="565,135,44,576" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="4"/>
+                    <Button x:Name="buttonStop2" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="565,240,44,471"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="4"/>
+
+                </Grid>
+            </TabItem>
+
+
+            <TabItem Header="Trimm" Height="20" VerticalAlignment="Top" Margin="-5,0,0,0" HorizontalAlignment="Left" Width="115">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="57*"/>
+                        <ColumnDefinition Width="35*"/>
+                        <ColumnDefinition Width="300*"/>
+                        <ColumnDefinition Width="20*"/>
                         <ColumnDefinition Width="834*"/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
@@ -193,45 +242,28 @@
                         <RowDefinition Height="50" />
                     </Grid.RowDefinitions>
 
-                    <Button x:Name="buttonCalEuler" Style="{StaticResource MyButton}" Content="Cal Euler" Margin="15,40,220,671" Click="button_Click_CalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" RenderTransformOrigin="-1.208,0.52" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonCalEuler" Style="{StaticResource MyButton}" Content="Cal Euler" Margin="15,40,200,671" Click="button_Click_CalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" RenderTransformOrigin="-1.208,0.52" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonNoCalEuler" Style="{StaticResource MyButton}" Content="No Cal Euler" Margin="15,135,200,576" Click="button_Click_NoCalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonCalMagneto" Style="{StaticResource MyButton}" Content="Cal Magneto" Margin="15,240,200,471" Click="button_Click_CalMagneto" Background="LightSeaGreen" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonSetRelPressureZero" Style="{StaticResource MyButton}" Content="set rel pressure zero" Margin="15,345,200,366" Click="button_Click_RelPressureZero" Background="LightBlue" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="buttonReset" Style="{StaticResource MyButton}" Content="RESET" Margin="670,40,44,671" Click="button_Click_Reset" Background="Red" Grid.Row ="0" Grid.Column="4"/>
 
-                    <Button x:Name="buttonNoCalEuler" Style="{StaticResource MyButton}" Content="No Cal Euler" Margin="15,135,220,576" Click="button_Click_NoCalEuler" Background="LightCoral" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Button x:Name="buttonCalMagneto" Style="{StaticResource MyButton}" Content="Cal Magneto" Margin="15,240,220,471" Click="button_Click_CalMagneto" Background="LightSeaGreen" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Button x:Name="buttonSetRelPressureZero" Style="{StaticResource MyButton}" Content="set rel pressure zero" Margin="15,345,220,366" Click="button_Click_RelPressureZero" Background="LightBlue" Grid.Row ="0" Grid.Column="1" Grid.ColumnSpan="2"/>
-                    <Button x:Name="buttonReset" Style="{StaticResource MyButton}" Content="RESET" Margin="670,40,44,671" Click="button_Click_Reset" Background="Red" Grid.Row ="0" Grid.Column="3"/>
+                    <Slider x:Name="sliderTrimmRoll" Background="#FF338BD4" Margin="225,40,369,690" Maximum="50" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="TrimmRoll_ValueChanged" Grid.Column="2" LargeChange="0.1" Grid.ColumnSpan="3" Minimum="-50"/>
+                    <Slider x:Name="sliderTrimmPitch" Background="#FF338BD4" Margin="225,100,369,630" Maximum="50" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="TrimmPitch_ValueChanged" Grid.Column="2" Grid.ColumnSpan="3" Minimum="-50" LargeChange="0.1" />
+                    <Slider x:Name="sliderTrimmYaw" Background="#FF338BD4" Margin="225,160,369,570" Maximum="50" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="TrimmYaw_ValueChanged" Grid.Column="2" Grid.ColumnSpan="3" Minimum="-50" LargeChange="0.1" />
 
-                    <Slider x:Name="sliderKP" Background="#FF338BD4" Margin="225,40,369,690" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKP_ValueChanged" Grid.Column="2" LargeChange="0.1" Value="12" Grid.ColumnSpan="2"/>
-                    <Slider x:Name="sliderKD" Background="#FF338BD4" Margin="225,100,369,630" Maximum="100" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderKD_ValueChanged" Grid.Column="2" Value="9" Grid.ColumnSpan="2" />
-                    <Slider x:Name="sliderKI" Background="#FF338BD4" Margin="225,160,369,570" Maximum="500" TickFrequency="20" TickPlacement="BottomRight" ValueChanged="sliderKI_ValueChanged" Grid.Column="2" Value="200" Grid.ColumnSpan="2" />
-                    <Slider x:Name="sliderKO" Background="#FF338BD4" Margin="225,220,369,510" TickPlacement="BottomRight" ValueChanged="sliderKO_ValueChanged" Grid.Column="2" Value="5" LargeChange="0.1" Maximum="20" Grid.ColumnSpan="2" />
-                    <Slider x:Name="sliderK1" Background="#FF338BD4" Margin="225,280,369,450" TickPlacement="BottomRight" ValueChanged="sliderK1_ValueChanged" Grid.Column="2" Value="70" Maximum="298" Grid.ColumnSpan="2" TickFrequency="10" />
-                    <Slider x:Name="sliderK2" Background="#FF338BD4" Margin="225,340,369,390" TickPlacement="BottomRight" ValueChanged="sliderK2_ValueChanged" Grid.Column="2" Value="200" Maximum="298" Grid.ColumnSpan="2" TickFrequency="10" />
-                    <Slider x:Name="sliderKTOT" Background="#FF338BD4" Margin="225,400,369,330" TickPlacement="BottomRight" ValueChanged="sliderKTOT_ValueChanged" Grid.Column="2" Value="140" Maximum="298" Grid.ColumnSpan="2" TickFrequency="10" />
-                    <Slider x:Name="sliderSF" Background="#FF338BD4" Margin="225,460,369,270" Maximum="400" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderSF_ValueChanged" Grid.Column="2" Value="333" Grid.ColumnSpan="2" />
-                    <Slider x:Name="sliderBeta" Background="#FF338BD4" Margin="225,520,369,210" TickFrequency="1" TickPlacement="BottomRight" ValueChanged="sliderBeta_ValueChanged" Grid.Column="2" Value="3" Grid.ColumnSpan="2" />
-                    <Slider x:Name="sliderOutputLimit" Background="#FF338BD4" Margin="225,580,369,150" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="sliderOutputLimit_ValueChanged" Grid.Column="2" Value="150" Grid.ColumnSpan="2" Maximum="300" />
-                    <Slider x:Name="sliderSetMahonyKp" Background="#FF338BD4" Margin="225,640,369,90" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="SetMahonyKp_ValueChanged" Grid.Column="2" Value="2" Grid.ColumnSpan="2" />
-                    <Slider x:Name="sliderSetMahonyKi" Background="#FF338BD4" Margin="225,700,369,30" TickFrequency="10" TickPlacement="BottomRight" ValueChanged="SetMahonyKi_ValueChanged" Grid.Column="2" Grid.ColumnSpan="2" />
-                    
 
-                    <Label x:Name="labelKP" ContentStringFormat="KP:  {0:F1}" Content="{Binding ElementName=sliderKP, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/10}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,40,209,690" Grid.Column="3"/>
-                    <Label x:Name="labelKD" ContentStringFormat="KD:  {0:F1}" Content="{Binding ElementName=sliderKD, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/10}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,100,209,630" Grid.Column="3"/>
-                    <Label x:Name="labelKI" ContentStringFormat="KI:  {0:F3}" Content="{Binding ElementName=sliderKI, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/1000}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,160,209,570" Grid.Column="3"/>
-                    <Label x:Name="labelKO" ContentStringFormat="KO:  {0:F2}" Content="{Binding ElementName=sliderKO, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/1}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,220,209,510" Grid.Column="3"/>
-                    <Label x:Name="labelK1" ContentStringFormat="K1:  {0:F2}" Content="{Binding ElementName=sliderK1, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/100}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,280,209,450" Grid.Column="3"/>
-                    <Label x:Name="labelK2" ContentStringFormat="K2:  {0:F2}" Content="{Binding ElementName=sliderK2, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/100}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,340,209,390" Grid.Column="3" RenderTransformOrigin="0.5,0.5"/>
-                    <Label x:Name="labelKTOT" ContentStringFormat="KTOT:  {0:F2}" Content="{Binding ElementName=sliderKTOT, Path=Value, Converter={StaticResource MathConv},ConverterParameter=@VALUE/100}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,400,209,330" Grid.Column="3" RenderTransformOrigin="0.5,0.5"/>
-                    <Label x:Name="labelSF" ContentStringFormat="SF:  {0:F0}" Content="{Binding ElementName=sliderSF, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,460,209,270" Grid.Column="3"/>
-                    <Label x:Name="labelBeta" ContentStringFormat="Beta:  {0:F1}" Content="{Binding ElementName=sliderBeta, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,520,209,210" Grid.Column="3"/>
-                    <Label x:Name="labelOutputLimit" ContentStringFormat="OutputLimit:  {0:F1}" Content="{Binding ElementName=sliderOutputLimit, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,580,209,150" Grid.Column="3"/>
-                    <Label x:Name="labelsetMahonyKp" ContentStringFormat="MKp:  {0:F1}" Content="{Binding ElementName=sliderSetMahonyKp, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,640,209,80" Grid.Column="3"/>
-                    <Label x:Name="labelsetMahonyKi" ContentStringFormat="MKi:  {0:F1}" Content="{Binding ElementName=sliderSetMahonyKi, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,700,209,20" Grid.Column="3"/>
+                    <Label x:Name="labelTrimmRoll" ContentStringFormat="Trimm Roll:  {0:F1}" Content="{Binding ElementName=sliderTrimmRoll, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,40,209,690" Grid.Column="4"/>
+                    <Label x:Name="labelTrimmPitch" ContentStringFormat="Trimm Pitch:  {0:F2}" Content="{Binding ElementName=sliderTrimmPitch, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,100,209,630" Grid.Column="4"/>
+                    <Label x:Name="labelTrimmYaw" ContentStringFormat="Trimm Yaw:  {0:F2}" Content="{Binding ElementName=sliderTrimmYaw, Path=Value}" Background="#FFEAEEF5" BorderBrush="Black" Margin="490,160,209,570" Grid.Column="4"/>
 
-                    <Button x:Name="buttonStart2" Style="{StaticResource MyButton}" Content="Start Motor" Margin="670,135,44,576" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="3"/>
-                    <Button x:Name="buttonStop2" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="670,240,44,471"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="3"/>
+                    <Button x:Name="buttonStart22" Style="{StaticResource MyButton}" Content="Start Motor" Margin="670,135,44,576" Click="button_Click_Start" Background="#FF42EC11" Grid.Row ="0" Grid.Column="4"/>
+                    <Button x:Name="buttonStop22" Style="{StaticResource MyButton}" Content="Stop Motor" Margin="670,240,44,471"  Click="button_Click_Stop"  Background="#FFEC1157" Grid.Row ="0" Grid.Column="4"/>
 
                 </Grid>
             </TabItem>
+
+
         </TabControl>
 
         <!-- Button -->
