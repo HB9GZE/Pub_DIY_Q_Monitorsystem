@@ -376,6 +376,30 @@ namespace VisualControlV3
             }
         }
 
+        private void button_Trx_All(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                sliderKP_ValueChanged(sliderKP,null);
+                sliderKD_ValueChanged(sliderKD, null);
+                sliderKI_ValueChanged(sliderKI, null);
+                sliderKO_ValueChanged(sliderKO, null);
+                sliderK1_ValueChanged(sliderK1, null);
+                sliderK2_ValueChanged(sliderK2, null);
+                sliderKTOT_ValueChanged(sliderKTOT, null);
+                sliderSF_ValueChanged(sliderSF, null);
+                sliderOutputLimit_ValueChanged(sliderOutputLimit, null);
+                SetDeltaT_ValueChanged(sliderSetDeltaT, null);
+                SetAlpha_ValueChanged(sliderSetAlpha, null);
+                TrimmRoll_ValueChanged(sliderTrimmRoll, null);
+                TrimmPitch_ValueChanged(sliderTrimmPitch,null);
+                TrimmYaw_ValueChanged(sliderTrimmYaw, null);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Open com port first!.", "Important Message");
+            }
+        }
 
         private void sliderKP_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -510,24 +534,6 @@ namespace VisualControlV3
                 {
                     mySerialCom.MySerialPort.Write("#sfm2/");
                     short dummy = (short)(sliderSF.Value);
-                    mySerialCom.WriteByte((byte)dummy);   //low byte
-                    mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Open com port first!.", "Important Message");
-                }
-            }
-        }
-
-        private void sliderBeta_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (initializing == false)
-            {
-                try
-                {
-                    mySerialCom.MySerialPort.Write("#sbe2/");
-                    short dummy = (short)(sliderBeta.Value * 100);
                     mySerialCom.WriteByte((byte)dummy);   //low byte
                     mySerialCom.WriteByte((byte)(dummy >> 8));   //high byte
                 }
